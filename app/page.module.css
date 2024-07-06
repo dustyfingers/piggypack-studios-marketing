@@ -1,16 +1,21 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
   background: #ffc4cf;
   color: #f3f9e3;
 
   .grid {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
     .lead {
+      letter-spacing: 4px;
       font-size: 128px;
+      max-width: 590px;
       text-align: center;
     }
   }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Cloud from "../svg/Cloud";
+import fonts from "@/app/fonts";
 
 import styles from "./component.module.css";
 
@@ -10,7 +11,9 @@ const LandingCTA = () => {
         containerClassName={styles.cloudContainer}
         className={styles.cloud}
       >
-        <span className={styles.linkText}>work with us</span>
+        <span className={`${styles.linkText} ${fonts.bodyFont.className}`}>
+          work with us
+        </span>
       </Cloud>
     </Link>
   );

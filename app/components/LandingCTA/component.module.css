@@ -1,11 +1,11 @@
 .link {
+  display: inline-block;
   .cloudContainer {
     position: relative;
     display: block;
     width: fit-content;
     .cloud {
       display: block;
-      z-index: 0;
     }
     .linkText {
       text-align: center;
@@ -13,8 +13,9 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      mix-blend-mode: difference;
-      z-index: 1;
+      /* mix-blend-mode: difference;
+      color: #c19d78; */
+      font-size: 1.25rem;
     }
   }
 }

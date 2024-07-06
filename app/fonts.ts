@@ -1,4 +1,4 @@
-import { Roboto_Mono } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import localFont from "next/font/local";
 
 const logoFont = localFont({
@@ -6,7 +6,7 @@ const logoFont = localFont({
   display: "swap",
 });
 
-export const bodyFont = Roboto_Mono({
+export const bodyFont = Comfortaa({
   subsets: ["latin"],
   display: "swap",
 });

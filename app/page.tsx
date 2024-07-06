@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.grid}>
-        {" "}
         <h1 className={`${styles.lead} ${fonts.logoFont.className}`}>
           PIGGYBACK studios
         </h1>
