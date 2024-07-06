@@ -1,10 +1,10 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import fonts from "./fonts";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.lead}>PIGGYBACK STUDIOS</h1>
+      <h1 className={fonts.logoFont.className}>PIGGYBACK STUDIOS</h1>
     </main>
   );
 }
