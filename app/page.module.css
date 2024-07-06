@@ -8,8 +8,11 @@
   background: #ffc4cf;
   color: #f3f9e3;
 
-  .lead {
-    font-size: 128px;
+  .grid {
+    .lead {
+      font-size: 128px;
+      text-align: center;
+    }
   }
 }
 
