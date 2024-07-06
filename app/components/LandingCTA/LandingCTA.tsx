@@ -11,7 +11,7 @@ const LandingCTA = () => {
         containerClassName={styles.cloudContainer}
         className={styles.cloud}
       >
-        <span className={`${styles.linkText} ${fonts.bodyFont.className}`}>
+        <span className={`${styles.linkText} ${fonts.logoFont.className}`}>
           work with us
         </span>
       </Cloud>

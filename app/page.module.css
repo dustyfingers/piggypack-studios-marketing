@@ -4,21 +4,14 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #ffc4cf;
+  /* llinear gradient between the two pinks */
+  background: rgb(255, 196, 207);
+  background: linear-gradient(
+    155deg,
+    rgba(255, 196, 207, 1) 0%,
+    rgba(246, 177, 177, 1) 100%
+  );
   color: #f3f9e3;
-
-  .grid {
-    display: grid;
-    gap: 1rem;
-    justify-items: center;
-    align-items: center;
-    .lead {
-      letter-spacing: 4px;
-      font-size: 128px;
-      max-width: 590px;
-      text-align: center;
-    }
-  }
 }
 
 /* Enable hover only on non-touch devices */

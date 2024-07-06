@@ -1,0 +1,12 @@
+.landingHero {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  .lead {
+    letter-spacing: 4px;
+    font-size: 128px;
+    max-width: 590px;
+    text-align: center;
+  }
+}

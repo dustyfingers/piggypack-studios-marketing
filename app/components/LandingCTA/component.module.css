@@ -13,9 +13,9 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      /* mix-blend-mode: difference;
-      color: #c19d78; */
-      font-size: 1.25rem;
+      mix-blend-mode: difference;
+      color: #c19d78;
+      font-size: 1.5rem;
     }
   }
 }
