@@ -9,7 +9,7 @@ import styles from "./component.module.css";
 
 const LandingCTA = () => {
   return (
-    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.05 }}>
       <Link href="/work-with-us" className={styles.link}>
         <Cloud
           containerClassName={styles.cloudContainer}
