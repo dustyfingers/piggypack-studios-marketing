@@ -1,0 +1,15 @@
+.whatWeDo {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f3f9e3;
+
+  .content {
+    mix-blend-mode: difference;
+    color: #c19d78;
+    text-align: center;
+  }
+}

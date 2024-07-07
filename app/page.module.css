@@ -3,15 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  /* llinear gradient between the two pinks */
-  background: rgb(255, 196, 207);
-  background: linear-gradient(
-    155deg,
-    rgba(255, 196, 207, 1) 0%,
-    rgba(246, 177, 177, 1) 100%
-  );
-  color: #f3f9e3;
 }
 
 /* Enable hover only on non-touch devices */

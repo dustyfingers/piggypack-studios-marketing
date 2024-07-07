@@ -1,8 +1,24 @@
 .landingHero {
-  display: grid;
-  gap: 1rem;
-  justify-items: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  /* linear gradient between the two pinks */
+  background: rgb(255, 196, 207);
+  background: linear-gradient(
+    155deg,
+    rgba(255, 196, 207, 1) 0%,
+    rgba(246, 177, 177, 1) 100%
+  );
+  color: #f3f9e3;
+
+  .landingGrid {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+  }
   .lead {
     letter-spacing: 4px;
     font-size: 128px;
