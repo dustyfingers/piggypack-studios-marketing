@@ -1,10 +1,17 @@
 import styles from "./page.module.css";
-import LandingHero from "../blocks/LandingHero";
+import PageHero from "../blocks/PageHero";
+import ContactForm from "../blocks/ContactForm";
 
 export default function WorkWithUs() {
   return (
     <main className={styles.main}>
-      <LandingHero />
+      <PageHero
+        headline={"Work With Us"}
+        subhead={
+          "Let us know as much as you can about your project and we will get back to you within 48 hours!"
+        }
+      />
+      <ContactForm />
     </main>
   );
 }

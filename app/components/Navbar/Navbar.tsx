@@ -5,15 +5,10 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className={style.navbar}>
-      <ul className={style.navMenu}>
-        <li className={style.navItem}>About Us</li>
-        <li className={style.navItem}>Our Work</li>
-      </ul>
-
       <Link href="/">
-        <h4 className={`${fonts.logoFont.className} ${style.logo}`}>
+        <h3 className={`${fonts.logoFont.className} ${style.logo}`}>
           PIGGYBACK
-        </h4>
+        </h3>
       </Link>
 
       <ul className={style.navMenu}>
