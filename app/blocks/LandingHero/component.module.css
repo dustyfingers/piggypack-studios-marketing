@@ -19,16 +19,10 @@
     justify-items: center;
     align-items: center;
     .leadContainer {
+      height: 420px;
       cursor: pointer;
-
-      .Typewriter {
-        border: 1px solid red;
-        /* this element is a span so font needs to be overridden */
-        .leadWrapper {
-          border: 1px solid green;
-          font-family: var(--font-logo) !important;
-        }
-      }
+      font-size: 128px;
+      text-align: center;
     }
   }
 }
