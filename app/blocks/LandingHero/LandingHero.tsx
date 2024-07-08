@@ -1,3 +1,4 @@
+"use client";
 import styles from "./component.module.css";
 import fonts from "@/app/fonts";
 import Typewriter from "typewriter-effect";
