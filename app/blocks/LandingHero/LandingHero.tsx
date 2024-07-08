@@ -9,19 +9,31 @@ const LandingHero = () => {
   return (
     <section className={styles.landingHero}>
       <div className={styles.landingGrid}>
-        <h1 className={`${styles.lead} ${fonts.logoFont.className}`}>
-          <Typewriter
-            options={{ strings: ["PIGGYBACK"], autoStart: true, loop: false }}
-          />
-        </h1>
-        <h1 className={`${styles.lead} ${fonts.logoFont.className}`}>
-          <Typewriter
-            options={{
-              strings: ["studios"],
-              loop: false,
-            }}
-          />
-        </h1>
+        <div className={styles.textContainer}>
+          <h1 className={`${styles.lead} ${fonts.logoFont.className}`}>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("PIGGYBACK").start();
+              }}
+              options={{
+                loop: false,
+                cursor: "",
+              }}
+            />
+          </h1>
+          <h1 className={`${styles.lead} ${fonts.logoFont.className}`}>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.pauseFor(1800).typeString("studios").start();
+              }}
+              options={{
+                loop: false,
+                cursor: "",
+              }}
+            />
+          </h1>
+        </div>
+
         <LandingCTA />
       </div>
     </section>
