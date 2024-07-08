@@ -21,8 +21,8 @@ const TextImageSection = ({
       }`}
     >
       <div className={style.contentContainer}>
-        <h4>{title}</h4>
-        <p>{text}</p>
+        <h4 className={style.title}>{title}</h4>
+        <p className={style.text}>{text}</p>
       </div>
       <div className={style.imageAndBorderContainer}>
         <div className={style.borderContainer}>
@@ -45,8 +45,8 @@ const WhatWeDo = () => {
   return (
     <section className={style.whatWeDo}>
       <div className={style.content}>
-        <h1 className={style.lead}>WHAT WE DO</h1>
-        <p>
+        <h2 className={style.title}>WHAT WE DO</h2>
+        <p className={style.text}>
           We help businesses establish and maintain their online presence. We
           help businesses find their brand's unique voice. blah blah blah.
         </p>

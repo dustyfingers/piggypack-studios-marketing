@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import ScrollProgressIndicator from "./components/ScrollProgressIndicator";
+import Footer from "./components/Footer";
 import fonts from "./fonts";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <ScrollProgressIndicator />
+        <Footer />
       </body>
     </html>
   );

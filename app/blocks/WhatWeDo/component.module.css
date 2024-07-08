@@ -11,6 +11,11 @@
     mix-blend-mode: difference;
     color: #c19d78;
     text-align: center;
+
+    .title,
+    .text {
+      margin-bottom: 2rem;
+    }
   }
 
   .gallery {
