@@ -1,4 +1,3 @@
-import fonts from "@/app/fonts";
 import style from "./component.module.css";
 import Link from "next/link";
 
@@ -6,9 +5,7 @@ const Navbar = () => {
   return (
     <nav className={style.navbar}>
       <Link href="/">
-        <h3 className={`${fonts.logoFont.className} ${style.logo}`}>
-          PIGGYBACK
-        </h3>
+        <h3 className={style.logo}>PIGGYBACK</h3>
       </Link>
 
       <ul className={style.navMenu}>

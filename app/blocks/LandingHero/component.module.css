@@ -18,13 +18,16 @@
     gap: 1rem;
     justify-items: center;
     align-items: center;
-    .textContainer {
-      height: 280px;
-      .lead {
-        letter-spacing: 4px;
-        font-size: 128px;
-        max-width: 590px;
-        text-align: center;
+    .leadContainer {
+      cursor: pointer;
+
+      .Typewriter {
+        border: 1px solid red;
+        /* this element is a span so font needs to be overridden */
+        .leadWrapper {
+          border: 1px solid green;
+          font-family: var(--font-logo) !important;
+        }
       }
     }
   }
