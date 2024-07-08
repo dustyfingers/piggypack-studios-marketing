@@ -34,7 +34,7 @@ const LandingHero = () => {
         </div>
         <p className={styles.contentContainer}>
           Piggyback Studios is a{" "}
-          <strong>boutique design and development</strong> agency located in the
+          <strong>boutique design and development</strong> agency based in the
           beautiful city of Colorado Springs, Colorado.
         </p>
         <LandingCTA />

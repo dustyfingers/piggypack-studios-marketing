@@ -8,8 +8,7 @@
   padding: 2rem;
 
   .content {
-    mix-blend-mode: difference;
-    color: #c19d78;
+    color: var(--blue);
     text-align: center;
 
     .title,
@@ -28,8 +27,7 @@
       gap: 3rem;
 
       .contentContainer {
-        color: #c19d78;
-        mix-blend-mode: difference;
+        color: var(--blue);
         grid-area: content;
       }
 
