@@ -33,8 +33,9 @@ const LandingHero = () => {
           />
         </div>
         <p className={styles.contentContainer}>
-          Piggyback Studios is a boutique design and development agency located
-          in the beautiful city of Colorado Springs, Colorado.
+          Piggyback Studios is a{" "}
+          <strong>boutique design and development</strong> agency located in the
+          beautiful city of Colorado Springs, Colorado.
         </p>
         <LandingCTA />
       </div>

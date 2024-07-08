@@ -16,19 +16,20 @@
   .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
 
     .textImageSection {
       display: grid;
-      grid-template-columns: 1fr 350px;
-      gap: 2rem;
+      gap: 3rem;
 
       .contentContainer {
         color: #c19d78;
         mix-blend-mode: difference;
+        grid-area: content;
       }
 
       .imageAndBorderContainer {
+        grid-area: image;
         .borderContainer {
           border: 1px solid #c19d78;
           position: relative;
@@ -38,10 +39,27 @@
           .image {
             position: absolute;
             top: 1rem;
+          }
+
+          .imageFirst {
+            left: 1rem;
+          }
+
+          .contentFirst {
             left: -1rem;
           }
         }
       }
+    }
+
+    .imageFirstContainer {
+      grid-template-areas: "image content";
+      grid-template-columns: 350px 1fr;
+    }
+
+    .contentFirstContainer {
+      grid-template-areas: "content image";
+      grid-template-columns: 1fr 350px;
     }
   }
 }

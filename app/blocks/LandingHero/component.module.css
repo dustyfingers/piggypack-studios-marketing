@@ -21,13 +21,15 @@
     align-items: center;
     .leadContainer {
       /* height fixes jumping issue on initial load */
-      /* height: 420px; */
+      height: 330px;
       cursor: pointer;
       font-size: 128px;
       text-align: center;
     }
     .contentContainer {
       text-align: center;
+      font-size: 36px;
+      margin-bottom: 2rem;
     }
   }
 }
