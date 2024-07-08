@@ -1,3 +1,4 @@
+import style from "./component.module.css";
 interface IPageHero {
   headline: string;
   subhead?: string;
@@ -5,7 +6,7 @@ interface IPageHero {
 
 const PageHero = ({ headline, subhead }: IPageHero) => {
   return (
-    <section>
+    <section className={style.pageHero}>
       <h1>{headline}</h1>
       {subhead && <p>{subhead}</p>}
     </section>

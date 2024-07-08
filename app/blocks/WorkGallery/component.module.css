@@ -1,0 +1,22 @@
+.workGallery {
+  display: grid;
+  margin: 0 2rem;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+
+  .image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1120px) {
+  .workGallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1120px) {
+  .workGallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
