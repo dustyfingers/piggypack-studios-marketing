@@ -1,6 +1,34 @@
 import Image from "next/image";
 import style from "./component.module.css";
 
+interface ITextImageSection {
+  title: string;
+  text: string;
+  imageSrc: string;
+}
+
+const TextImageSection = ({ title, text, imageSrc }: ITextImageSection) => {
+  return (
+    <div className={style.textImageSection}>
+      <div className={style.contentContainer}>
+        <h4>{title}</h4>
+        <p>{text}</p>
+      </div>
+      <div className={style.imageAndBorderContainer}>
+        <div className={style.borderContainer}>
+          <Image
+            src={imageSrc}
+            width={350}
+            height={350}
+            alt="stock image of a guy working"
+            className={style.image}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const WhatWeDo = () => {
   return (
     <section className={style.whatWeDo}>
@@ -13,41 +41,25 @@ const WhatWeDo = () => {
       </div>
 
       <div className={style.gallery}>
-        <Image
-          src="/images/stock-image.jpg"
-          width={250}
-          height={250}
-          alt="stock image of a guy working"
+        <TextImageSection
+          title="Web Design and Development"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+          imageSrc="/images/stock-image.jpg"
         />
-        <Image
-          src="/images/stock-image.jpg"
-          width={250}
-          height={250}
-          alt="stock image of a guy working"
+        <TextImageSection
+          title="Brand Identity Development"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+          imageSrc="/images/stock-image.jpg"
         />
-        <Image
-          src="/images/stock-image.jpg"
-          width={250}
-          height={250}
-          alt="stock image of a guy working"
+        <TextImageSection
+          title="Web Hosting and Maintenance"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+          imageSrc="/images/stock-image.jpg"
         />
-        <Image
-          src="/images/stock-image.jpg"
-          width={250}
-          height={250}
-          alt="stock image of a guy working"
-        />
-        <Image
-          src="/images/stock-image.jpg"
-          width={250}
-          height={250}
-          alt="stock image of a guy working"
-        />
-        <Image
-          src="/images/stock-image.jpg"
-          width={250}
-          height={250}
-          alt="stock image of a guy working"
+        <TextImageSection
+          title="Social Media Marketing and Management"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+          imageSrc="/images/stock-image.jpg"
         />
       </div>
     </section>

@@ -5,6 +5,7 @@
   justify-content: center;
   flex-direction: column;
   background: #f3f9e3;
+  padding: 2rem;
 
   .content {
     mix-blend-mode: difference;
@@ -14,14 +15,33 @@
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-/* Tablet and Above */
-@media (min-width: 701px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    .textImageSection {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 2rem;
+
+      .contentContainer {
+        color: #c19d78;
+        mix-blend-mode: difference;
+      }
+
+      .imageAndBorderContainer {
+        .borderContainer {
+          border: 1px solid #c19d78;
+          position: relative;
+          height: 350px;
+          width: 350px;
+
+          .image {
+            position: absolute;
+            top: 1rem;
+            left: -1rem;
+          }
+        }
+      }
+    }
   }
 }

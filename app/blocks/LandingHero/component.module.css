@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
   /* linear gradient between the two pinks */
   background: rgb(255, 196, 207);
   background: linear-gradient(
@@ -23,6 +24,9 @@
       /* height: 420px; */
       cursor: pointer;
       font-size: 128px;
+      text-align: center;
+    }
+    .contentContainer {
       text-align: center;
     }
   }
