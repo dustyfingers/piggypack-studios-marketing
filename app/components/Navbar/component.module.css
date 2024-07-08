@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 2rem 0 2rem;
+  z-index: 99;
 
   .logo {
     max-width: 74px;
@@ -15,6 +16,7 @@
     display: flex;
     gap: 0.75rem;
     .navItem {
+      border: 1px solid red;
       mix-blend-mode: difference;
       list-style-type: none;
     }

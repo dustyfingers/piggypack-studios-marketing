@@ -1,5 +1,21 @@
+"use client";
 import Image from "next/image";
 import style from "./component.module.css";
+import { motion, Variants } from "framer-motion";
+
+const sectionVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 1.5,
+    },
+  },
+};
 
 interface ITextImageSection {
   title: string;
@@ -15,29 +31,36 @@ const TextImageSection = ({
   imageFirst,
 }: ITextImageSection) => {
   return (
-    <div
-      className={`${style.textImageSection} ${
-        imageFirst ? style.imageFirstContainer : style.contentFirstContainer
-      }`}
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.4 }}
     >
-      <div className={style.contentContainer}>
-        <h4 className={style.title}>{title}</h4>
-        <p className={style.text}>{text}</p>
-      </div>
-      <div className={style.imageAndBorderContainer}>
-        <div className={style.borderContainer}>
-          <Image
-            src={imageSrc}
-            width={350}
-            height={350}
-            alt="stock image of a guy working"
-            className={`${style.image} ${
-              imageFirst ? style.imageFirst : style.contentFirst
-            }`}
-          />
+      <motion.div
+        className={`${style.textImageSection} ${
+          imageFirst ? style.imageFirstContainer : style.contentFirstContainer
+        }`}
+        variants={sectionVariants}
+      >
+        <div className={style.contentContainer}>
+          <h4 className={style.title}>{title}</h4>
+          <p className={style.text}>{text}</p>
         </div>
-      </div>
-    </div>
+        <div className={style.imageAndBorderContainer}>
+          <div className={style.borderContainer}>
+            <Image
+              src={imageSrc}
+              width={350}
+              height={350}
+              alt="stock image of a guy working"
+              className={`${style.image} ${
+                imageFirst ? style.imageFirst : style.contentFirst
+              }`}
+            />
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
