@@ -1,5 +1,4 @@
 .navbar {
-  background: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,6 +8,7 @@
   padding: 0.5rem 2rem 0 2rem;
   z-index: 99;
   color: var(--cream);
+  mix-blend-mode: difference;
 
   .logo {
     max-width: 74px;

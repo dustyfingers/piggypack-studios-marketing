@@ -8,7 +8,7 @@ export default function WorkWithUs() {
       <PageHero
         headline={"Work With Us"}
         subhead={
-          "Let us know as much as you can about your project and we will get back to you within 48 hours!"
+          "Let us know as much as you can about your project, and we will get back to you within 48 hours."
         }
       />
       <ContactForm />
