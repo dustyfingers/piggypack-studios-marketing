@@ -1,3 +1,4 @@
+import Image from "next/image";
 import style from "./component.module.css";
 
 const WhatWeDo = () => {
@@ -9,6 +10,45 @@ const WhatWeDo = () => {
           We help businesses establish and maintain their online presence. We
           help businesses find their brand's unique voice. blah blah blah.
         </p>
+      </div>
+
+      <div className={style.gallery}>
+        <Image
+          src="/images/stock-image.jpg"
+          width={250}
+          height={250}
+          alt="stock image of a guy working"
+        />
+        <Image
+          src="/images/stock-image.jpg"
+          width={250}
+          height={250}
+          alt="stock image of a guy working"
+        />
+        <Image
+          src="/images/stock-image.jpg"
+          width={250}
+          height={250}
+          alt="stock image of a guy working"
+        />
+        <Image
+          src="/images/stock-image.jpg"
+          width={250}
+          height={250}
+          alt="stock image of a guy working"
+        />
+        <Image
+          src="/images/stock-image.jpg"
+          width={250}
+          height={250}
+          alt="stock image of a guy working"
+        />
+        <Image
+          src="/images/stock-image.jpg"
+          width={250}
+          height={250}
+          alt="stock image of a guy working"
+        />
       </div>
     </section>
   );

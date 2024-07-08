@@ -119,3 +119,65 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Desktop and above */
+@media (min-width: 1120px) {
+}
+
+/* Tablet and Above */
+@media (min-width: 701px) {
+  /* font-sizes - perfect fifth in typescale.com with 24px as a base */
+  h1 {
+    font-size: 273.38px;
+  }
+  h2 {
+    font-size: 182.25px;
+  }
+  h3 {
+    font-size: 121.5px;
+  }
+  h4 {
+    font-size: 81px;
+  }
+  h5 {
+    font-size: 54px;
+  }
+  h6 {
+    font-size: 36px;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  /* font-sizes - perfect fifth in typescale.com with 16px as a base */
+  h1 {
+    font-size: 182.25px;
+  }
+  h2 {
+    font-size: 121.5px;
+  }
+  h3 {
+    font-size: 81px;
+  }
+  h4 {
+    font-size: 54px;
+  }
+  h5 {
+    font-size: 36px;
+  }
+  h6 {
+    font-size: 24px;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 16px;
+  }
+}

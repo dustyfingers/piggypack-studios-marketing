@@ -1,5 +1,4 @@
 .whatWeDo {
-  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -11,5 +10,18 @@
     mix-blend-mode: difference;
     color: #c19d78;
     text-align: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Tablet and Above */
+@media (min-width: 701px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

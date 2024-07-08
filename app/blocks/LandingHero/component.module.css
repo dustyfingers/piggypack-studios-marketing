@@ -19,7 +19,8 @@
     justify-items: center;
     align-items: center;
     .leadContainer {
-      height: 420px;
+      /* height fixes jumping issue on initial load */
+      /* height: 420px; */
       cursor: pointer;
       font-size: 128px;
       text-align: center;
