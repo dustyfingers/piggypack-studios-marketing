@@ -13,7 +13,9 @@ export const bodyFont = Kalnia({
   variable: "--font-body",
 });
 
-export default {
+const fonts = {
   logoFont,
   bodyFont,
 };
+
+export default fonts;

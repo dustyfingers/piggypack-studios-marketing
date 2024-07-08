@@ -71,7 +71,7 @@ const WhatWeDo = () => {
         <h2 className={style.title}>WHAT WE DO</h2>
         <p className={style.text}>
           We help businesses establish and maintain their online presence. We
-          help businesses find their brand's unique voice. blah blah blah.
+          help businesses find their brand&apos;s unique voice. blah blah blah.
         </p>
       </div>
 
