@@ -20,7 +20,7 @@
   .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
 
     .textImageSection {
       display: grid;
@@ -36,8 +36,8 @@
         .borderContainer {
           border: 1px solid #c19d78;
           position: relative;
-          height: 350px;
-          width: 350px;
+          height: 450px;
+          width: 450px;
 
           .image {
             position: absolute;
@@ -57,12 +57,12 @@
 
     .imageFirstContainer {
       grid-template-areas: "image content";
-      grid-template-columns: 350px 1fr;
+      grid-template-columns: 450px 1fr;
     }
 
     .contentFirstContainer {
       grid-template-areas: "content image";
-      grid-template-columns: 1fr 350px;
+      grid-template-columns: 1fr 450px;
     }
   }
 }

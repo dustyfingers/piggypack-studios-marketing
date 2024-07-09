@@ -50,8 +50,8 @@ const TextImageSection = ({
           <div className={style.borderContainer}>
             <Image
               src={imageSrc}
-              width={350}
-              height={350}
+              width={450}
+              height={450}
               alt="stock image of a guy working"
               className={`${style.image} ${
                 imageFirst ? style.imageFirst : style.contentFirst
