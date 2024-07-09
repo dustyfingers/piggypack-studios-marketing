@@ -8,9 +8,8 @@ const drawParams: Variants = {
   onscreen: {
     pathLength: 1,
     transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 3,
+      ease: "easeInOut",
+      duration: 6,
     },
   },
 };
@@ -18,9 +17,9 @@ const drawParams: Variants = {
 const PikesPeak = () => {
   return (
     <motion.svg
-      width="1500px"
-      height="300px"
-      viewBox="0 0 1100 500"
+      width="1299.56px"
+      height="292.62px"
+      viewBox="-100 185 1299.56 290"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       initial="offscreen"
