@@ -1,0 +1,7 @@
+.madeInColorado {
+  display: grid;
+  justify-items: center;
+  background: var(--ltpink);
+  padding: 2rem;
+  color: var(--cream);
+}
