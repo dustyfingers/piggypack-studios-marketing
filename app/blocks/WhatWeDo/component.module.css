@@ -5,7 +5,8 @@
   justify-content: center;
   flex-direction: column;
   background: #f3f9e3;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  scroll-snap-align: start;
 
   .content {
     color: var(--blue);
@@ -20,7 +21,9 @@
   .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 5rem;
+    /* added margin because of 1rem image offset */
+    margin-bottom: 1rem;
 
     .textImageSection {
       display: grid;
@@ -29,6 +32,10 @@
       .contentContainer {
         color: var(--blue);
         grid-area: content;
+
+        .title {
+          margin-bottom: 1rem;
+        }
       }
 
       .imageAndBorderContainer {

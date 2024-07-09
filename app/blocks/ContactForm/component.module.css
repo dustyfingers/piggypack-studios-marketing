@@ -1,4 +1,5 @@
 .formContainer {
+  scroll-snap-align: start;
   .contactForm {
     display: flex;
     flex-direction: column;

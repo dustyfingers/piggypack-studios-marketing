@@ -1,3 +1,4 @@
 .pageHero {
-  margin: 0 2rem;
+  padding: 4rem 2rem;
+  scroll-snap-align: start;
 }
