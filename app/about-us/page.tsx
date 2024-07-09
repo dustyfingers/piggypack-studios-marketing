@@ -5,8 +5,7 @@ import WhatWeDo from "../blocks/WhatWeDo";
 export default function AboutUs() {
   return (
     <main className={styles.main}>
-      <LandingHero />
-      <WhatWeDo />
+      <AboutUs />
     </main>
   );
 }
