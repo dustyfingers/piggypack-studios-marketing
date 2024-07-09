@@ -1,7 +1,15 @@
 import style from "./component.module.css";
 
 const Footer = () => {
-  return <div className={style.footer}>blah blah blah</div>;
+  return (
+    <footer className={style.footer}>
+      <ul>
+        <li>123-456-7890</li>
+        <li>123-456-7890</li>
+        <li>123-456-7890</li>
+      </ul>
+    </footer>
+  );
 };
 
 export default Footer;

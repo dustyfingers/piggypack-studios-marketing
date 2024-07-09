@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const GalleryItem = () => {
   return (
-    <div>
+    <div className={style.galleryItemContainer}>
       <Image
         src="/images/stock-image.jpg"
         alt="a picture of a guy working"
@@ -11,6 +11,7 @@ const GalleryItem = () => {
         height={300}
         className={style.image}
       />
+      <div className={style.galleryItemOverlay}></div>
     </div>
   );
 };
