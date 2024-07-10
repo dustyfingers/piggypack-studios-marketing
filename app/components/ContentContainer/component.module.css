@@ -1,5 +1,7 @@
 .contentContainer {
   border: 1px solid red;
+  width: 100%;
+  margin: 0 2rem;
 }
 
 /* Desktop and above */
@@ -7,5 +9,6 @@
   .contentContainer {
     border: 1px solid green;
     max-width: 1200px;
+    /* margin: 0; */
   }
 }

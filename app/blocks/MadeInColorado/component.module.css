@@ -4,7 +4,7 @@
   width: 100%;
   justify-items: center;
   background: var(--ltpink);
-  padding: 4rem 2rem;
+  padding: 4rem 0;
   color: var(--cream);
   scroll-snap-align: start;
 }

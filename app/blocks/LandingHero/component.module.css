@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   scroll-snap-align: start;
   /* linear gradient between the two pinks */
   background: rgb(255, 196, 207);

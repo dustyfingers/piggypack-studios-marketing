@@ -1,25 +1,25 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem 0 2rem;
   z-index: 99;
   color: var(--cream);
   mix-blend-mode: difference;
-
-  .logo {
-    max-width: 74px;
-  }
-
-  .navMenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .flexContainer {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    .navItem {
-      list-style-type: none;
+    justify-content: space-between;
+
+    .navMenu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .navItem {
+        list-style-type: none;
+      }
     }
   }
 }
