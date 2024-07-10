@@ -23,8 +23,8 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
-        <ScrollProgressIndicator />
         <Footer />
+        <ScrollProgressIndicator />
       </body>
     </html>
   );

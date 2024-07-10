@@ -3,6 +3,8 @@ import Image from "next/image";
 import style from "./component.module.css";
 import { motion, Variants } from "framer-motion";
 
+import ContentContainer from "@/app/components/ContentContainer/ContentContainer";
+
 const sectionVariants: Variants = {
   offscreen: {
     opacity: 0,
@@ -67,38 +69,41 @@ const TextImageSection = ({
 const WhatWeDo = () => {
   return (
     <section className={style.whatWeDo}>
-      <div className={style.content}>
-        <h2 className={style.title}>WHAT WE DO</h2>
-        <p className={style.text}>
-          We help businesses establish and maintain their online presence. We
-          help businesses find their brand&apos;s unique voice. blah blah blah.
-        </p>
-      </div>
+      <ContentContainer>
+        <div className={style.content}>
+          <h2 className={style.title}>WHAT WE DO</h2>
+          <p className={style.text}>
+            We help businesses establish and maintain their online presence. We
+            help businesses find their brand&apos;s unique voice. blah blah
+            blah.
+          </p>
+        </div>
 
-      <div className={style.gallery}>
-        <TextImageSection
-          title="Web Design and Development"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
-          imageSrc="/images/stock-image.jpg"
-        />
-        <TextImageSection
-          title="Brand Identity Development"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
-          imageSrc="/images/stock-image.jpg"
-          imageFirst={true}
-        />
-        <TextImageSection
-          title="Web Hosting and Maintenance"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
-          imageSrc="/images/stock-image.jpg"
-        />
-        <TextImageSection
-          title="Social Media Marketing and Management"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
-          imageSrc="/images/stock-image.jpg"
-          imageFirst={true}
-        />
-      </div>
+        <div className={style.gallery}>
+          <TextImageSection
+            title="Web Design and Development"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+            imageSrc="/images/stock-image.jpg"
+          />
+          <TextImageSection
+            title="Brand Identity Development"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+            imageSrc="/images/stock-image.jpg"
+            imageFirst={true}
+          />
+          <TextImageSection
+            title="Web Hosting and Maintenance"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+            imageSrc="/images/stock-image.jpg"
+          />
+          <TextImageSection
+            title="Social Media Marketing and Management"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus pretium quam vulputate dignissim suspendisse. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget mi proin sed libero enim. Enim neque volutpat ac tincidunt vitae semper quis lectus. Purus in massa tempor nec feugiat nisl pretium fusce id. Nec dui nunc mattis enim ut tellus. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquam etiam erat velit scelerisque in dictum non consectetur."
+            imageSrc="/images/stock-image.jpg"
+            imageFirst={true}
+          />
+        </div>
+      </ContentContainer>
     </section>
   );
 };

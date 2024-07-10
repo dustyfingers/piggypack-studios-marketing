@@ -1,0 +1,11 @@
+.contentContainer {
+  border: 1px solid red;
+}
+
+/* Desktop and above */
+@media (min-width: 1120px) {
+  .contentContainer {
+    border: 1px solid green;
+    max-width: 1200px;
+  }
+}

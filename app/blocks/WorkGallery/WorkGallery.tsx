@@ -1,3 +1,4 @@
+import ContentContainer from "@/app/components/ContentContainer/ContentContainer";
 import style from "./component.module.css";
 import Image from "next/image";
 
@@ -19,21 +20,23 @@ const GalleryItem = () => {
 const WorkGallery = () => {
   return (
     <section className={style.workGallery}>
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
+      <ContentContainer>
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+        <GalleryItem />
+      </ContentContainer>
     </section>
   );
 };
