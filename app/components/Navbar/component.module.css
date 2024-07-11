@@ -17,9 +17,6 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      .navItem {
-        list-style-type: none;
-      }
     }
   }
 }
