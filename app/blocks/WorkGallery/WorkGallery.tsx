@@ -21,21 +21,23 @@ const WorkGallery = () => {
   return (
     <section className={style.workGallery}>
       <ContentContainer>
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
-        <GalleryItem />
+        <div className={style.gridContainer}>
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+          <GalleryItem />
+        </div>
       </ContentContainer>
     </section>
   );

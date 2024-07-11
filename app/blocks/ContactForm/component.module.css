@@ -1,4 +1,8 @@
 .formContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   scroll-snap-align: start;
   .contactForm {
     display: flex;

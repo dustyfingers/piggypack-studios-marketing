@@ -1,48 +1,47 @@
 .workGallery {
-  display: grid;
-  margin: 0 2rem;
-  grid-template-columns: repeat(2, 1fr);
   scroll-snap-align: start;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .galleryItemContainer {
-    position: relative;
-    .image {
-      opacity: 1;
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: 0.5s ease;
-      backface-visibility: hidden;
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .galleryItemContainer {
+      position: relative;
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+
+      .galleryItemOverlay {
+        opacity: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
     }
 
-    .galleryItemOverlay {
-      opacity: 0;
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: 0.5s ease;
-      backface-visibility: hidden;
-    }
-  }
-
-  .galleryItemContainer:hover {
-    .image {
-      opacity: 0.1;
-    }
-    .galleryItemOverlay {
-      opacity: 1;
+    .galleryItemContainer:hover {
+      .image {
+        opacity: 0.1;
+      }
+      .galleryItemOverlay {
+        opacity: 1;
+      }
     }
   }
 }
 
-@media (min-width: 701px) and (max-width: 1120px) {
-  .workGallery {
+@media (min-width: 701px) {
+  .gridContainer {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1120px) {
-  .workGallery {
-    grid-template-columns: repeat(5, 1fr);
   }
 }

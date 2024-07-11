@@ -3,7 +3,7 @@ import style from "./component.module.css";
 
 const AboutUs = () => {
   return (
-    <section>
+    <section className={style.aboutUs}>
       <ContentContainer>About Us</ContentContainer>
     </section>
   );
