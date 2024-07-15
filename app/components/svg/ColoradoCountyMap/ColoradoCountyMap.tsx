@@ -13,6 +13,9 @@ const ColoradoCountyMap = () => {
     >
       <g id="layer1" transform="translate(0,-149)">
         <motion.polygon
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           fill="var(--cream)"
           stroke="var(--ltpink)"
           strokeWidth="600"

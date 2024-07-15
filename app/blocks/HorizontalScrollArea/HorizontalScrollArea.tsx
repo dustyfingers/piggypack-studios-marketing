@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect, useMemo } from "react";
 import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 import style from "./component.module.css";
 import { useScrollContext } from "@/app/context/Scroll";
@@ -42,31 +43,19 @@ const HorizontalScrollArea = () => {
   return (
     <section className={style.sectionPin} ref={sectionRef}>
       <div className={style.pinWrap} ref={pinWrapRef}>
-        <div>
+        <div className={style.scrollSection}>
           <h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </h2>
         </div>
-        <div>
+        <div className={style.scrollSection}>
           <h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </h2>
         </div>
-        <div>
-          <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h2>
-        </div>
-        <div>
-          <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h2>
-        </div>
-        <div>
+        <div className={style.scrollSection}>
           <h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

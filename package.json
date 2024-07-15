@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@types/flubber": "^0.4.0",
+    "flubber": "^0.4.2",
     "framer-motion": "^11.2.13",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^4.1.4",

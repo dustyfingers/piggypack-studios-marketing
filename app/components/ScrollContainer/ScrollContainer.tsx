@@ -30,9 +30,9 @@ const ScrollContainer = ({ children }: IScrollContainer) => {
       options={{ smooth: true }}
       location={pathname}
       containerRef={scrollContainerRef}
-      onLocationChange={(scroll: any) =>
-        scroll.scrollTo(0, { duration: 0, disableLerp: true })
-      } // If you want to reset the scroll position to 0 for example
+      // onLocationChange={(scroll: any) =>
+      //   scroll.scrollTo(0, { duration: 0, disableLerp: true })
+      // } // If you want to reset the scroll position to 0 for example
       onUpdate={() => console.log("Updated, but not on location change!")}
     >
       <div data-scroll-container ref={scrollContainerRef}>

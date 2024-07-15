@@ -12,7 +12,8 @@
     rgba(255, 196, 207, 1) 0%,
     rgba(246, 177, 177, 1) 100%
   );
-  color: #f3f9e3;
+  color: var(--cream);
+  position: relative;
 
   .landingGrid {
     display: grid;

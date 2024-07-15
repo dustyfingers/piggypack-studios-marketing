@@ -3,7 +3,7 @@
   overflow: hidden;
   display: flex;
   left: 0;
-  background: var(--ltpink);
+  background: var(--blue);
   color: var(--cream);
 
   .pinWrap {
@@ -13,9 +13,8 @@
     align-items: center;
     padding: 50px 10vw;
 
-    & > * {
-      min-width: 60vw;
-      padding: 0 5vw;
+    .scrollSection {
+      border: 1px solid red;
     }
   }
 }
