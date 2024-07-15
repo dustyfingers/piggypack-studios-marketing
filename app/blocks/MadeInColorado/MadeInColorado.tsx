@@ -1,12 +1,14 @@
 import PikesPeak from "@/app/components/svg/PikesPeak/PikesPeak";
 import style from "./component.module.css";
 import ContentContainer from "@/app/components/ContentContainer/ContentContainer";
+import ColoradoCountyMap from "@/app/components/svg/ColoradoCountyMap/ColoradoCountyMap";
 
 const MadeInColorado = () => {
   return (
     <section className={style.madeInColorado}>
       <ContentContainer>
-        <PikesPeak />
+        {/* <PikesPeak /> will probably move into another smaller component */}
+        <ColoradoCountyMap />
         <h2>Made In Colorado</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
