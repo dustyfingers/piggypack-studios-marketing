@@ -1,0 +1,21 @@
+.sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--ltpink);
+  color: var(--cream);
+
+  .pinWrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+
+    & > * {
+      min-width: 60vw;
+      padding: 0 5vw;
+    }
+  }
+}

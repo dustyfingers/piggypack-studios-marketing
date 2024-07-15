@@ -4,7 +4,7 @@ import ContactForm from "../blocks/ContactForm";
 
 export default function WorkWithUs() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} data-scroll-section>
       <PageHero
         headline={"Work With Us"}
         subhead={

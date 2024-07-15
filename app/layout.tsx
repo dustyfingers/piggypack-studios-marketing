@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import ScrollProgressIndicator from "./components/ScrollProgressIndicator";
 import Footer from "./components/Footer";
 import fonts from "./fonts";
+import ScrollContainer from "./components/ScrollContainer";
+import { ScrollProvider } from "./context/Scroll";
 
 export const metadata: Metadata = {
   title: "Piggyback Studios",
@@ -22,7 +24,9 @@ export default function RootLayout({
     >
       <body>
         <Navbar />
-        {children}
+        <ScrollProvider>
+          <ScrollContainer>{children}</ScrollContainer>
+        </ScrollProvider>
         <Footer />
         <ScrollProgressIndicator />
       </body>

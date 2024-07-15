@@ -4,7 +4,7 @@ import WorkGallery from "../blocks/WorkGallery";
 
 export default function OurWork() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} data-scroll-section>
       <PageHero headline={"Our Work"} />
       <WorkGallery />
     </main>

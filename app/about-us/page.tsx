@@ -6,7 +6,7 @@ import PageHero from "../blocks/PageHero";
 
 export default function AboutUsPage() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} data-scroll-section>
       <PageHero
         headline="About Us"
         subhead="Learn more about what makes Piggyback Studios tick"
