@@ -24,7 +24,7 @@ const AnimatedBlob = ({ pathbank }: IAnimatedBlob) => {
       delay: 1,
       mass: 30,
       damping: 50,
-      stiffness: 200,
+      stiffness: 500,
       onComplete: () => {
         if (pathIndex === paths.length - 1) {
           progress.set(0);
