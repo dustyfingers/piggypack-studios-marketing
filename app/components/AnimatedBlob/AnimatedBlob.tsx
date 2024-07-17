@@ -8,6 +8,7 @@ import style from "./component.module.css";
 
 interface IAnimatedBlob {
   pathbank: number;
+  size: number;
 }
 const AnimatedBlob = ({ pathbank }: IAnimatedBlob) => {
   const [pathIndex, setPathIndex] = useState(0);
@@ -21,14 +22,11 @@ const AnimatedBlob = ({ pathbank }: IAnimatedBlob) => {
   useEffect(() => {
     const animation = animate(progress, pathIndex, {
       type: "spring",
-      delay: 1,
-      mass: 30,
-      damping: 50,
-      stiffness: 500,
+      duration: 1.75,
+      bounce: 0.55,
       onComplete: () => {
         if (pathIndex === paths.length - 1) {
-          progress.set(0);
-          setPathIndex(1);
+          setPathIndex(0);
         } else {
           setPathIndex(pathIndex + 1);
         }

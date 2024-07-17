@@ -7,4 +7,11 @@
   padding: 4rem 0;
   color: var(--cream);
   scroll-snap-align: start;
+
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
