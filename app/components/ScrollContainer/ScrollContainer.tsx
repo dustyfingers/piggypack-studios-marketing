@@ -5,6 +5,7 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useScrollContext } from "@/app/context/Scroll";
+import Footer from "../Footer";
 
 gsap.registerPlugin(useGSAP);
 
@@ -22,6 +23,7 @@ const ScrollContainer = ({ children }: IScrollContainer) => {
       setScrollContext({
         ...scrollContext,
         scrollContainer: scrollContainerRef.current,
+        scrollContainerRef: scrollContainerRef,
       });
     }
   }, [scrollContainerRef.current]);
@@ -30,14 +32,13 @@ const ScrollContainer = ({ children }: IScrollContainer) => {
       options={{ smooth: true }}
       location={pathname}
       containerRef={scrollContainerRef}
+      watch={[pathname]}
       // onLocationChange={(scroll: any) =>
       //   scroll.scrollTo(0, { duration: 0, disableLerp: true })
       // } // If you want to reset the scroll position to 0 for example
-      onUpdate={() => console.log("Updated, but not on location change!")}
+      // onUpdate={() => console.log("Updated, but not on location change!")}
     >
-      <div data-scroll-container ref={scrollContainerRef}>
-        {children}
-      </div>
+      {children}
     </LocomotiveScrollProvider>
   );
 };

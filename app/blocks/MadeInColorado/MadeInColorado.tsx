@@ -5,7 +5,7 @@ import ColoradoCountyMap from "@/app/components/svg/ColoradoCountyMap/ColoradoCo
 
 const MadeInColorado = () => {
   return (
-    <section className={style.madeInColorado}>
+    <section className={style.madeInColorado} data-scroll-section>
       <ContentContainer>
         <div className={style.contentWrapper}>
           {/* <PikesPeak /> will probably move into another smaller component */}

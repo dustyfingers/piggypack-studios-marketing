@@ -8,7 +8,7 @@ import AnimatedBlob from "@/app/components/AnimatedBlob";
 
 const LandingHero = () => {
   return (
-    <section className={styles.landingHero}>
+    <section className={styles.landingHero} data-scroll-section>
       <ContentContainer>
         <div className={styles.landingGrid}>
           <div className={styles.leadContainer}>
@@ -43,7 +43,9 @@ const LandingHero = () => {
           <LandingCTA />
         </div>
       </ContentContainer>
-      <AnimatedBlob pathbank={1} />
+      {/* <AnimatedBlob pathbank={1} size={100} top={1} left={1} delay={0.4} /> */}
+      {/* <AnimatedBlob pathbank={2} size={200} top={1} right={1} delay={0.9} /> */}
+      {/* <AnimatedBlob pathbank={3} size={500} bottom={1} left={1} delay={0} /> */}
     </section>
   );
 };

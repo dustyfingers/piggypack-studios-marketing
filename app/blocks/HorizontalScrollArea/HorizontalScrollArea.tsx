@@ -8,29 +8,29 @@ import { useScrollContext } from "@/app/context/Scroll";
 
 const HorizontalScrollArea = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const pinWrapRef = useRef<HTMLDivElement>(null);
+  const scrollableAreaRef = useRef<HTMLDivElement>(null);
   const [scrollContext] = useScrollContext();
 
-  const pinWrapWidth = useMemo(() => {
-    if (pinWrapRef.current) return pinWrapRef.current.offsetWidth;
+  const horizontalScrollAreaLength = useMemo(() => {
+    if (scrollableAreaRef.current) return scrollableAreaRef.current.offsetWidth;
     else return 0;
-  }, [pinWrapRef.current]);
-  const horizontalScrollLength = pinWrapWidth - window.innerWidth;
-
-  useEffect(() => {}, []);
+  }, [scrollableAreaRef.current]);
+  let horizontalScrollLength: number = 0;
+  if (typeof window !== "undefined")
+    horizontalScrollLength = horizontalScrollAreaLength - window.innerWidth;
 
   useGSAP(
     () => {
       if (scrollContext.scrollContainer) {
-        gsap.to(".pinWrap", {
+        gsap.to(style.pinWrap, {
           scrollTrigger: {
             scroller: scrollContext.scrollContainer, //locomotive-scroll container
             scrub: true,
-            trigger: "#sectionPin",
+            trigger: style.horizontalScrollSection,
             pin: true,
             // anticipatePin: 1,
             start: "top top",
-            end: pinWrapWidth,
+            end: horizontalScrollAreaLength,
           },
           x: -horizontalScrollLength,
           ease: "none",
@@ -41,25 +41,47 @@ const HorizontalScrollArea = () => {
   );
 
   return (
-    <section className={style.sectionPin} ref={sectionRef}>
-      <div className={style.pinWrap} ref={pinWrapRef}>
+    <section
+      className={style.horizontalScrollSection}
+      ref={sectionRef}
+      data-scroll-section
+    >
+      <div className={style.scrollableArea} ref={scrollableAreaRef}>
         <div className={style.scrollSection}>
-          <h2>
+          <h6>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h2>
+          </h6>
         </div>
         <div className={style.scrollSection}>
-          <h2>
+          <h6>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h2>
+          </h6>
         </div>
         <div className={style.scrollSection}>
-          <h2>
+          <h6>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </h2>
+          </h6>
+        </div>
+        <div className={style.scrollSection}>
+          <h6>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </h6>
+        </div>
+        <div className={style.scrollSection}>
+          <h6>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </h6>
+        </div>
+        <div className={style.scrollSection}>
+          <h6>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </h6>
         </div>
       </div>
     </section>

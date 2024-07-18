@@ -1,4 +1,4 @@
-.sectionPin {
+.horizontalScrollSection {
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -6,15 +6,16 @@
   background: var(--blue);
   color: var(--cream);
 
-  .pinWrap {
+  .scrollableArea {
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 50px 10vw;
 
     .scrollSection {
       border: 1px solid red;
+      width: 100vw;
+      height: 100vh;
     }
   }
 }

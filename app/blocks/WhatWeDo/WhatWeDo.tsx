@@ -68,7 +68,7 @@ const TextImageSection = ({
 
 const WhatWeDo = () => {
   return (
-    <section className={style.whatWeDo}>
+    <section className={style.whatWeDo} data-scroll-section>
       <ContentContainer>
         <div className={style.content}>
           <h2 className={style.title}>WHAT WE DO</h2>
