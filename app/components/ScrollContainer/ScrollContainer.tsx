@@ -38,7 +38,7 @@ const ScrollContainer = ({ children }: IScrollContainer) => {
       // } // If you want to reset the scroll position to 0 for example
       // onUpdate={() => console.log("Updated, but not on location change!")}
     >
-      {children}
+      <div data-scroll-container>{children}</div>
     </LocomotiveScrollProvider>
   );
 };

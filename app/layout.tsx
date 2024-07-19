@@ -26,10 +26,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <ScrollProvider>
-          <ScrollContainer>
-            {children}
-            <Footer />
-          </ScrollContainer>
+          <ScrollContainer>{children}</ScrollContainer>
         </ScrollProvider>
         <ScrollProgressIndicator />
       </body>

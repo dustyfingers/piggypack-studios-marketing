@@ -21,13 +21,17 @@
   .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5rem;
-    /* added margin because of 1rem image offset */
+    gap: 3rem;
+    /* added margin because of 1rem image offset border */
     margin-bottom: 1rem;
 
     .textImageSection {
       display: grid;
-      gap: 3rem;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "image"
+        "content";
 
       .contentContainer {
         color: var(--blue);
@@ -39,37 +43,57 @@
       }
 
       .imageAndBorderContainer {
+        width: 100%;
         grid-area: image;
-        .borderContainer {
-          border: 1px solid #c19d78;
-          position: relative;
-          height: 450px;
-          width: 450px;
 
-          .image {
-            position: absolute;
-            top: 1rem;
-          }
-
-          .imageFirst {
-            left: 1rem;
-          }
-
-          .contentFirst {
-            left: -1rem;
-          }
+        .image {
+          width: 100%;
+          object-fit: cover;
         }
       }
     }
+  }
+}
 
-    .imageFirstContainer {
-      grid-template-areas: "image content";
-      grid-template-columns: 450px 1fr;
-    }
+/* tablet and up */
+@media (min-width: 701px) {
+  .whatWeDo {
+    .gallery {
+      gap: 5rem;
+      .textImageSection {
+        gap: 3rem;
 
-    .contentFirstContainer {
-      grid-template-areas: "content image";
-      grid-template-columns: 1fr 450px;
+        .imageAndBorderContainer {
+          .borderContainer {
+            border: 1px solid var(--ltbrown);
+            position: relative;
+            height: 450px;
+            width: 450px;
+
+            .image {
+              position: absolute;
+              top: 1rem;
+            }
+
+            .imageFirst {
+              left: 1rem;
+            }
+
+            .contentFirst {
+              left: -1rem;
+            }
+          }
+        }
+      }
+      .imageFirstContainer {
+        grid-template-areas: "image content";
+        grid-template-columns: 450px 1fr;
+      }
+
+      .contentFirstContainer {
+        grid-template-areas: "content image";
+        grid-template-columns: 1fr 450px;
+      }
     }
   }
 }

@@ -1,20 +1,20 @@
 .horizontalScrollSection {
   height: 100vh;
-  overflow: hidden;
-  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  border: 1px solid green;
+  -webkit-overflow-scrolling: touch;
+
   left: 0;
   background: var(--blue);
   color: var(--cream);
 
   .scrollableArea {
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    width: 300vw;
 
     .scrollSection {
       border: 1px solid red;
-      width: 100vw;
+      width: 50vw;
       height: 100vh;
     }
   }
