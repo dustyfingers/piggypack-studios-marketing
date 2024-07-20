@@ -4,17 +4,10 @@ import LandingHero from "./blocks/LandingHero";
 import WhatWeDo from "./blocks/WhatWeDo";
 import MadeInColorado from "./blocks/MadeInColorado/MadeInColorado";
 import HorizontalScrollArea from "./blocks/HorizontalScrollArea";
-// import { useScrollContext } from "./context/Scroll";
-// import Footer from "./components/Footer";
 
 export default function Home() {
-  // const [scrollContext] = useScrollContext();
   return (
-    <main
-      className={styles.main}
-      // ref={scrollContext.scrollContainerRef}
-      // data-scroll-section
-    >
+    <main className={styles.main}>
       <LandingHero />
       <WhatWeDo />
       <HorizontalScrollArea />

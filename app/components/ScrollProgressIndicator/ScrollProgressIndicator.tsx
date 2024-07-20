@@ -1,20 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import style from "./component.module.css";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import { useEffect } from "react";
 
 const ScrollProgressIndicator = () => {
-  const { scroll } = useLocomotiveScroll();
-
-  useEffect(() => {
-    console.log(scroll);
-  }, [scroll]);
+  const { scrollYProgress } = useScroll();
 
   return (
     <motion.div
       className={style.scrollProgressIndicator}
-      style={{ scaleX: scroll }}
+      style={{ scaleX: scrollYProgress }}
     />
   );
 };

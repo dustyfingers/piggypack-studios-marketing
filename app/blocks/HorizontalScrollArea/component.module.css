@@ -13,6 +13,8 @@
   width: 100%;
   max-width: 100vw;
   position: initial;
+  background: var(--blue);
+  color: var(--cream);
 
   view-timeline-name: --section-pin-tl;
   view-timeline-axis: block;

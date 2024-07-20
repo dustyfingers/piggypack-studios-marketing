@@ -61,24 +61,24 @@ ul {
 
 /* Tablet and Above */
 @media (min-width: 701px) {
-  /* font-sizes - perfect fifth in typescale.com with 16px as a base */
+  /* font-sizes - perfect fourth in typescale.com with 16px as a base */
   h1 {
-    font-size: 182.25px;
+    font-size: 89.76px;
   }
   h2 {
-    font-size: 121.5px;
+    font-size: 67.34px;
   }
   h3 {
-    font-size: 81px;
+    font-size: 50.52px;
   }
   h4 {
-    font-size: 54px;
+    font-size: 37.9px;
   }
   h5 {
-    font-size: 36px;
+    font-size: 28.43px;
   }
   h6 {
-    font-size: 24px;
+    font-size: 21.33px;
   }
 
   p,
@@ -90,24 +90,24 @@ ul {
 
 /* Mobile */
 @media (max-width: 700px) {
-  /* font-sizes - perfect fifth in typescale.com with 12px as a base */
+  /* font-sizes - perfect fourth in typescale.com with 12px as a base */
   h1 {
-    font-size: 136.69px;
+    font-size: 67.32px;
   }
   h2 {
-    font-size: 91.13px;
+    font-size: 50.5px;
   }
   h3 {
-    font-size: 60.75px;
+    font-size: 37.89px;
   }
   h4 {
-    font-size: 40.5px;
+    font-size: 28.42px;
   }
   h5 {
-    font-size: 27px;
+    font-size: 21.32px;
   }
   h6 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   p,
