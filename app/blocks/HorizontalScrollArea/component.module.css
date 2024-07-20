@@ -29,11 +29,10 @@
 
     .scrollableArea {
       height: 100vh;
-      width: 250vmax;
+      width: fit-content;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 50px 10vw;
 
       /* Hook animation */
       will-change: transform;
@@ -44,8 +43,10 @@
       animation-range: contain 0% contain 100%;
 
       .scrollSection {
-        min-width: 60vmax;
-        padding: 0 5vmax;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

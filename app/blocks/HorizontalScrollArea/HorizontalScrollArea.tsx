@@ -1,5 +1,6 @@
 "use client";
 
+import ContentContainer from "@/app/components/ContentContainer";
 import style from "./component.module.css";
 
 const HorizontalScrollArea = () => {
@@ -8,40 +9,44 @@ const HorizontalScrollArea = () => {
       <div className={style.stickyArea}>
         <div className={style.scrollableArea}>
           <div className={style.scrollSection}>
-            <h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h6>
+            <ContentContainer>
+              <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h6>
+            </ContentContainer>
           </div>
           <div className={style.scrollSection}>
-            <h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h6>
+            <ContentContainer>
+              <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h6>
+            </ContentContainer>
           </div>
           <div className={style.scrollSection}>
-            <h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h6>
+            <ContentContainer>
+              <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h6>
+            </ContentContainer>
           </div>
           <div className={style.scrollSection}>
-            <h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h6>
+            <ContentContainer>
+              <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h6>
+            </ContentContainer>
           </div>
           <div className={style.scrollSection}>
-            <h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h6>
-          </div>
-          <div className={style.scrollSection}>
-            <h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h6>
+            <ContentContainer>
+              <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h6>
+            </ContentContainer>
           </div>
         </div>
       </div>

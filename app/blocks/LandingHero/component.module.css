@@ -22,7 +22,7 @@
     align-items: center;
     .leadContainer {
       /* height fixes jumping issue on initial load */
-      height: 330px;
+      height: 121.16px;
       cursor: pointer;
       font-size: 128px;
       text-align: center;
@@ -31,6 +31,18 @@
       text-align: center;
       font-size: 36px;
       margin-bottom: 2rem;
+    }
+  }
+}
+
+/* Tablet and Above */
+@media (min-width: 701px) {
+  .landingHero {
+    .landingGrid {
+      .leadContainer {
+        /* height fixes jumping issue on initial load */
+        height: 164px;
+      }
     }
   }
 }
