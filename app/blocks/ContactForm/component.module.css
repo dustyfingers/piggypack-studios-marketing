@@ -8,7 +8,33 @@
     display: flex;
     flex-direction: column;
 
-    .formInput {
+    .formInputContainer {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: var(--cream);
+      .formLabel {
+        margin-bottom: 0.25rem;
+        font-family: var(--font-body);
+      }
+      .formInput {
+        width: 100%;
+        padding: 0.5rem 0.25rem;
+        font-family: var(--font-body);
+        color: var(--cream);
+        border: none;
+        border-bottom: 1px solid var(--cream);
+      }
+    }
+
+    .submitButton {
+      padding: 0.5rem 0.25rem;
+      border-radius: 0.33rem;
+      font-family: var(--font-body);
+      color: var(--cream);
+      background: transparent;
+      border: 1px solid var(--cream);
     }
   }
 }

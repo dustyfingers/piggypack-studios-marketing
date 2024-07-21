@@ -16,7 +16,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const res = await fetch("/api/contact-us", {
+    const res = await fetch("/api/work-with-us", {
       method: "POST",
       body: JSON.stringify(data),
     });
@@ -39,6 +39,7 @@ const ContactForm = () => {
             <input
               {...register("name", { required: true })}
               className={style.formInput}
+              placeholder="John Smith"
             />
           </label>
           {errors.name && <span>This field is required</span>}
@@ -48,19 +49,21 @@ const ContactForm = () => {
               type="email"
               {...register("email", { required: true })}
               className={style.formInput}
+              placeholder="johnsmith@email.com"
             />
           </label>
           {errors.email && <span>This field is required</span>}
           <label className={style.formInputContainer}>
-            <span className={style.formLabel}>Message</span>
+            <span className={style.formLabel}>Message:</span>
             <input
               type="textarea"
               {...register("message", { required: true })}
               className={style.formInput}
+              placeholder="Tell us about your project..."
             />
           </label>
           {errors.message && <span>This field is required</span>}
-          <input type="submit" value="submit" />
+          <input type="submit" value="submit" className={style.submitButton} />
         </form>
       </ContentContainer>
     </section>
