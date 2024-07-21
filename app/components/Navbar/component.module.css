@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid red;
   .flexContainer {
     display: flex;
     align-items: center;
