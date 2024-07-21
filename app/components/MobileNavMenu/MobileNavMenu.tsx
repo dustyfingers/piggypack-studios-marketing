@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import Link from "next/link";
+
 import style from "./component.module.css";
 import { useMobileNavMenuContext } from "@/app/context/MobileNavMenu";
 
@@ -21,9 +23,17 @@ const MobileNavMenu = () => {
           mobileNavMenu.isOpen ? style.mobileNavOpen : style.mobileNavClosed
         } ${style.mobileNavMenu}`}
       >
-        <li>Home</li>
-        <li>About</li>
-        <li>Work</li>
+        <li className={style.navItem}>
+          <Link href="/about-us" className={style.navItemLink}>
+            About Us
+          </Link>
+        </li>
+        <li className={style.navItem}>
+          <Link href="/our-work">Our Work</Link>
+        </li>
+        <li className={style.navItem}>
+          <Link href="/work-with-us">Work With Us</Link>
+        </li>
       </ul>
     </div>
   );

@@ -1,6 +1,5 @@
 .mobileNavMenuContainer {
   position: relative;
-  mix-blend-mode: normal;
   .mobileNavMenu {
     display: flex;
     flex-direction: column;

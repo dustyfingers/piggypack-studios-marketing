@@ -8,6 +8,7 @@ import fonts from "./fonts";
 import Footer from "./components/Footer";
 import { MobileNavMenuProvider } from "./context/MobileNavMenu";
 import MobileNavMenu from "./components/MobileNavMenu";
+import ContentContainer from "./components/ContentContainer";
 
 export const metadata: Metadata = {
   title: "Piggyback Studios",
@@ -27,6 +28,9 @@ export default function RootLayout({
       <body>
         <MobileNavMenuProvider>
           <Navbar />
+          {/* <ContentContainer>
+            <MobileNavMenu />
+          </ContentContainer> */}
         </MobileNavMenuProvider>
         {children}
         <Footer />

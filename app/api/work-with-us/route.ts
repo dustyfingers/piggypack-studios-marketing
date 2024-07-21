@@ -1,16 +1,17 @@
 import formData from "form-data";
 import Mailgun from "mailgun.js";
 
-import type { NextApiRequest } from "next";
+import type { NextRequest } from "next/server";
 
-export async function POST(req: NextApiRequest) {
+export async function POST(req: NextRequest) {
   const mailgun = new Mailgun(formData);
   const mg = mailgun.client({
     username: "api",
     key: process.env.MAILGUN_API_KEY || "",
   });
 
-  const { email, message, name } = req.body;
+  const body = await req.json();
+  const { email, message, name } = body;
 
   try {
     const msg = await mg.messages.create(process.env.MAILGUN_DOMAIN || "", {
@@ -25,6 +26,6 @@ export async function POST(req: NextApiRequest) {
     console.log(err);
   }
 
-  // send success or failure response here
+  // TODO: send success or failure response here...
   return Response.json({ message: "Hello from Next.js!" }, { status: 200 });
 }

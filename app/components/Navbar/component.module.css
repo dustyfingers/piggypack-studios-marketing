@@ -3,12 +3,14 @@
   top: 0;
   z-index: 99;
   color: var(--cream);
-  mix-blend-mode: difference;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  mix-blend-mode: difference;
 
+  /* FIXME: cant seem to get mix-blend-mode to work on this flex container? */
+  /* if i can, i could get the mobile menu in a much better spot */
   .flexContainer {
     display: flex;
     align-items: center;

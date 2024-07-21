@@ -26,6 +26,7 @@ const ColoradoCountyMap = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.25 }}
+      className={style.coloradoSvg}
     >
       <g id="layer1" transform="translate(0,-149)">
         <motion.polygon
