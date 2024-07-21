@@ -1,9 +1,13 @@
 .pageHero {
-  padding: 4rem 0;
+  padding: 3rem 0;
   scroll-snap-align: start;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--cream);
+
+  .pageHeadline {
+    margin-bottom: 1rem;
+  }
 }

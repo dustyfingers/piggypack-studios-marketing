@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border: 1px solid red;
   .flexContainer {
     display: flex;
     align-items: center;
@@ -15,9 +17,19 @@
     margin: 0.5rem 0;
 
     .navMenu {
-      display: flex;
+      display: none;
       align-items: center;
       gap: 1rem;
+    }
+  }
+}
+
+@media (min-width: 701px) {
+  .navbar {
+    .flexContainer {
+      .navMenu {
+        display: flex;
+      }
     }
   }
 }

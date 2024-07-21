@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import ScrollProgressIndicator from "./components/ScrollProgressIndicator";
 import fonts from "./fonts";
 import Footer from "./components/Footer";
+import { MobileNavMenuProvider } from "./context/MobileNavMenu";
+import MobileNavMenu from "./components/MobileNavMenu";
 
 export const metadata: Metadata = {
   title: "Piggyback Studios",
@@ -23,7 +25,9 @@ export default function RootLayout({
       className={`${fonts.bodyFont.variable} ${fonts.logoFont.variable}`}
     >
       <body>
-        <Navbar />
+        <MobileNavMenuProvider>
+          <Navbar />
+        </MobileNavMenuProvider>
         {children}
         <Footer />
         <ScrollProgressIndicator />

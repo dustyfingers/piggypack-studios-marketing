@@ -8,6 +8,7 @@ type Inputs = {
   email: string;
   message: string;
 };
+
 const ContactForm = () => {
   const {
     register,

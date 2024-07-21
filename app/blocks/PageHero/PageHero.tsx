@@ -9,7 +9,7 @@ const PageHero = ({ headline, subhead }: IPageHero) => {
   return (
     <section className={style.pageHero}>
       <ContentContainer>
-        <h1>{headline}</h1>
+        <h1 className={style.pageHeadline}>{headline}</h1>
         {subhead && <p>{subhead}</p>}
       </ContentContainer>
     </section>
