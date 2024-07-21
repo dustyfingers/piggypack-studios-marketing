@@ -41,7 +41,9 @@
 }
 
 @media (min-width: 701px) {
-  .gridContainer {
-    grid-template-columns: repeat(4, 1fr);
+  .workGallery {
+    .gridContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
