@@ -12,7 +12,11 @@ const GalleryItem = () => {
         height={300}
         className={style.image}
       />
-      <div className={style.galleryItemOverlay}></div>
+      <div className={style.galleryItemOverlay}>
+        <div className={style.overlayContent}>
+          <p>Project Name</p>
+        </div>
+      </div>
     </div>
   );
 };

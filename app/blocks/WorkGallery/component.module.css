@@ -20,12 +20,22 @@
       }
 
       .galleryItemOverlay {
-        opacity: 0;
-        display: block;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        height: auto;
+        height: 100%;
         transition: 0.5s ease;
         backface-visibility: hidden;
+        background-color: rgba(0, 0, 0, 0);
+
+        .overlayContent {
+          opacity: 0;
+          color: var(--cream);
+          transition: 0.5s ease;
+        }
       }
     }
 
@@ -34,7 +44,11 @@
         opacity: 0.1;
       }
       .galleryItemOverlay {
-        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.33);
+
+        .overlayContent {
+          opacity: 1;
+        }
       }
     }
   }
