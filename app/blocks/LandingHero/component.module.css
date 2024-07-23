@@ -29,7 +29,7 @@
     }
     .contentContainer {
       text-align: center;
-      font-size: 36px;
+      font-size: 24px;
       margin-bottom: 2rem;
     }
   }
@@ -42,6 +42,10 @@
       .leadContainer {
         /* height fixes jumping issue on initial load */
         height: 164px;
+      }
+
+      .contentContainer {
+        font-size: 36px;
       }
     }
   }

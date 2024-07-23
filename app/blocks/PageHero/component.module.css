@@ -1,5 +1,6 @@
 .pageHero {
-  padding: 3rem 0;
+  margin-top: 2rem;
+  padding: 2rem 0;
   scroll-snap-align: start;
   width: 100%;
   display: flex;
@@ -9,5 +10,11 @@
 
   .pageHeadline {
     margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 701px) {
+  .pageHero {
+    margin-top: 38px;
   }
 }
