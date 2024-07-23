@@ -7,7 +7,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className={style.navbar}>
-      <ContentContainer>
+      <ContentContainer width={100}>
         <div className={style.flexContainer}>
           <Link href="/">
             <h6 className={style.logo}>PIGGYBACK</h6>
