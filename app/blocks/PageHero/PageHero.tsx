@@ -8,7 +8,7 @@ interface IPageHero {
 const PageHero = ({ headline, subhead }: IPageHero) => {
   return (
     <section className={style.pageHero}>
-      <ContentContainer>
+      <ContentContainer width={100}>
         <h1 className={style.pageHeadline}>{headline}</h1>
         {subhead && <p>{subhead}</p>}
       </ContentContainer>
