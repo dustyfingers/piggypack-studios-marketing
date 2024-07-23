@@ -3,7 +3,7 @@ import { useMobileNavMenuContext } from "@/app/context/MobileNavMenu";
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const hamburgerHeight = 20;
+const hamburgerHeight = 16;
 
 const hamburgerWidth = Math.round(hamburgerHeight * 1.33);
 const stripeHeight = hamburgerHeight / 5;
