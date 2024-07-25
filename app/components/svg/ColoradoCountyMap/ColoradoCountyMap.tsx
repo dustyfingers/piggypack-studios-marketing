@@ -1,6 +1,7 @@
 "use client";
+import { useEffect } from "react";
 import style from "./component.module.css";
-import { motion, Variants } from "framer-motion";
+import { motion, useAnimate, usePresence, Variants } from "framer-motion";
 
 const drawParams: Variants = {
   offscreen: {
@@ -16,17 +17,39 @@ const drawParams: Variants = {
 };
 
 const ColoradoCountyMap = () => {
+  const [animationScope, animate] = useAnimate();
+  const [isPresent, safeToRemove] = usePresence();
+
+  const enterExitAnimation = () => {
+    if (isPresent) {
+      const enterAnimation = async () => {
+        await animate(animationScope.current, { opacity: 1 });
+        await animate("polygon", { opacity: 1, x: 0 });
+      };
+      enterAnimation();
+    } else {
+      const exitAnimation = async () => {
+        await animate("polygon", { opacity: 0, x: -100 });
+        await animate(animationScope.current, { opacity: 0 });
+        safeToRemove();
+      };
+      exitAnimation();
+    }
+  };
+
+  // useEffect(() => {
+  //   enterExitAnimation();
+  // }, [isPresent]);
+
   return (
     <motion.svg
-      width="210mm"
-      height="148mm"
       viewBox="0 0 210 148"
       version="1.1"
-      id="svg4887"
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.25 }}
+      // initial="offscreen"
+      // whileInView="onscreen"
+      // viewport={{ once: true, amount: 0.25 }}
       className={style.coloradoSvg}
+      // ref={animationScope}
     >
       <g id="layer1" transform="translate(0,-149)">
         <motion.polygon

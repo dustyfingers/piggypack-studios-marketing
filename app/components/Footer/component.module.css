@@ -8,4 +8,42 @@
   align-items: center;
   justify-content: center;
   color: var(--cream);
+  background: var(--blue);
+
+  .footerContent {
+    border: 1px solid var(--cream);
+    display: grid;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    .listHeader {
+      font-size: 24px;
+      font-family: var(--font-body);
+      margin-bottom: 0.25rem;
+    }
+
+    .footerListItem {
+      font-family: var(--font-body);
+    }
+  }
+}
+
+@media (min-width: 701px) {
+  .footer {
+    .footerContent {
+      grid-template-columns: repeat(3, 1fr);
+
+      .listHeader {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .footer {
+    .footerContent {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }

@@ -1,3 +1,10 @@
 .coloradoSvg {
   width: 100%;
+  height: fit-content;
+}
+
+@media (min-width: 701px) {
+  .coloradoSvg {
+    max-height: 500px;
+  }
 }
