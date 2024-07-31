@@ -2,6 +2,7 @@
 
 import ContentContainer from "@/app/components/ContentContainer";
 import style from "./component.module.css";
+import Image from "next/image";
 
 const HorizontalScrollArea = () => {
   return (
@@ -10,6 +11,13 @@ const HorizontalScrollArea = () => {
         <div className={style.scrollableArea}>
           <div className={style.scrollSection}>
             <ContentContainer>
+              <Image
+                src={"/images/stock-image.jpg"}
+                alt={"a guy working"}
+                width={512}
+                height={512}
+                className={style.image}
+              />
               <h6>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.

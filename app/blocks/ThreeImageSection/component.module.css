@@ -1,0 +1,28 @@
+.threeImageSection {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  margin: 3rem 0;
+  scroll-snap-align: start;
+
+  .threeImageGrid {
+    display: grid;
+    /* width: 100%; */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    border: 1px solid green;
+
+    .gridImage {
+      width: 100%;
+      border: 1px solid red;
+    }
+  }
+}
+
+@media (min-width: 701px) {
+  .threeImageSection {
+    .threeImageGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

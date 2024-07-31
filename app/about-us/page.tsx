@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
-import LandingHero from "../blocks/LandingHero";
-import WhatWeDo from "../blocks/WhatWeDo";
 import AboutUs from "../blocks/AboutUs";
 import PageHero from "../blocks/PageHero";
+import OurImpact from "../blocks/OurImpact";
+import WhatWeDo from "../blocks/WhatWeDo";
 
 export default function AboutUsPage() {
   return (
@@ -12,6 +12,8 @@ export default function AboutUsPage() {
         subhead="Learn more about what makes Piggyback Studios tick"
       />
       <AboutUs />
+      <WhatWeDo />
+      <OurImpact />
     </main>
   );
 }

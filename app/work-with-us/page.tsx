@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import PageHero from "../blocks/PageHero";
 import ContactForm from "../blocks/ContactForm";
+import ThreeImageSection from "../blocks/ThreeImageSection";
 
 export default function WorkWithUs() {
   return (
@@ -12,6 +13,7 @@ export default function WorkWithUs() {
         }
       />
       <ContactForm />
+      <ThreeImageSection />
     </main>
   );
 }

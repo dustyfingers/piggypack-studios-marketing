@@ -64,6 +64,10 @@ const ContactForm = () => {
             />
           </label>
           {errors.message && <span>This field is required</span>}
+          {/* types of service interested in */}
+          <div className={style.interestGrid}></div>
+          {/* estimated budget */}
+          <div className={style.budgetGrid}></div>
           <input type="submit" value="submit" className={style.submitButton} />
         </form>
       </ContentContainer>

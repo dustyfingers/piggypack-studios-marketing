@@ -18,7 +18,7 @@ const LandingHero = () => {
               options={{
                 loop: false,
                 cursor: "",
-                wrapperClassName: "leadWrapper",
+                wrapperClassName: styles.leadWrapper,
               }}
               component={"h1"}
             />
@@ -29,7 +29,7 @@ const LandingHero = () => {
               options={{
                 loop: false,
                 cursor: "",
-                wrapperClassName: "leadWrapper",
+                wrapperClassName: styles.leadWrapper,
               }}
               component={"h1"}
             />
