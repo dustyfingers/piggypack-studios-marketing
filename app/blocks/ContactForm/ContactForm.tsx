@@ -33,7 +33,7 @@ const ContactForm = () => {
 
   return (
     <section className={style.formContainer}>
-      <ContentContainer width={100}>
+      <ContentContainer>
         <form className={style.contactForm} onSubmit={handleSubmit(onSubmit)}>
           <label className={style.formInputContainer}>
             <span className={style.formLabel}>Name:</span>

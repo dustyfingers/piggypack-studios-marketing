@@ -1,9 +1,15 @@
 .impactSection {
-  display: grid;
   width: 100%;
-  justify-items: center;
-  background: var(--ltpink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f3f9e3;
   padding: 4rem 0;
-  color: var(--cream);
   scroll-snap-align: start;
+
+  .impactGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

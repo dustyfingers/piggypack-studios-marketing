@@ -5,7 +5,7 @@ import ContentContainer from "@/app/components/ContentContainer";
 const ThreeImageSection = () => {
   return (
     <section className={style.threeImageSection}>
-      <ContentContainer width={100}>
+      <ContentContainer>
         <div className={style.threeImageGrid}>
           <Image
             src="/images/stock-image.jpg"

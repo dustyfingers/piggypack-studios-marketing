@@ -8,7 +8,7 @@ const Footer = () => {
   let year = date.getFullYear();
   return (
     <footer className={style.footer}>
-      <ContentContainer width={100}>
+      <ContentContainer>
         <div className={style.footerContent}>
           <ul>
             <li className={style.listHeader}>Contact Us</li>
