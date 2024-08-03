@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #f3f9e3;
+  background: var(--blue);
+  color: var(--cream);
   padding: 4rem 0;
   scroll-snap-align: start;
 
   .impactGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    .impactGridItem {
+      border: 1px solid red;
+    }
   }
 }

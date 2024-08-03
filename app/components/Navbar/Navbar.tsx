@@ -10,7 +10,7 @@ const Navbar = () => {
       <ContentContainer>
         <div className={style.flexContainer}>
           <Link href="/">
-            <h6 className={style.logo}>PIGGYBACK</h6>
+            <h3 className={style.logo}>Piggyback</h3>
           </Link>
           <ul className={style.navMenu}>
             <li className={style.navItem}>

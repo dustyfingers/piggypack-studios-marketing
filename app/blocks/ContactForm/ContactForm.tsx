@@ -2,6 +2,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import style from "./component.module.css";
 import ContentContainer from "@/app/components/ContentContainer/ContentContainer";
+import { useState } from "react";
 
 type Inputs = {
   name: string;
@@ -30,6 +31,8 @@ const ContactForm = () => {
     }
     console.log(data);
   };
+
+  const [interestItems, setInterestItems] = useState<string[]>([]);
 
   return (
     <section className={style.formContainer}>
@@ -65,9 +68,35 @@ const ContactForm = () => {
           </label>
           {errors.message && <span>This field is required</span>}
           {/* types of service interested in */}
-          <div className={style.interestGrid}></div>
+          <label className={style.gridLabel}>I am looking for...</label>
+          <div className={style.interestGrid}>
+            <input
+              type="button"
+              value="E-Commerce Site"
+              onClick={() =>
+                setInterestItems([...interestItems, "E-Commerce Site"])
+              }
+            />
+            <input type="button" value="Brand Development" />
+            <input
+              type="button"
+              value="Website Upgrades, Hosting and Maintenance"
+            />
+            <input
+              type="button"
+              value="Social Media Marketing and Management"
+            />
+            <input type="button" value="Marketing Site" />
+            <input type="button" value="Not Sure" />
+          </div>
           {/* estimated budget */}
-          <div className={style.budgetGrid}></div>
+          <label className={style.gridLabel}>My budget is around...</label>
+          <div className={style.budgetGrid}>
+            <input type="button" value="<5K" />
+            <input type="button" value="5K-10K" />
+            <input type="button" value="10K-25K" />
+            <input type="button" value="25K+" />
+          </div>
           <input type="submit" value="submit" className={style.submitButton} />
         </form>
       </ContentContainer>

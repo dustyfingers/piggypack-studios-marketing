@@ -43,7 +43,6 @@
       animation-range: contain 0% contain 100%;
 
       .scrollSection {
-        border: 1px solid red;
         width: 100vw;
         height: 100vh;
         display: flex;

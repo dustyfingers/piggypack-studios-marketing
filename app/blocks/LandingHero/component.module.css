@@ -22,16 +22,13 @@
     align-items: center;
     .leadContainer {
       /* height fixes jumping issue on initial load */
-      height: 121.16px;
+      /* height: 121.16px; */
       cursor: pointer;
       font-size: 128px;
       text-align: center;
-      /* width: 100%; */
+      width: 100%;
 
       .leadWrapper {
-        /* border: 1px solid red; */
-        /* font-size: 11.11%; */
-        /* width: 100%; */
       }
     }
     .contentContainer {
@@ -48,7 +45,7 @@
     .landingGrid {
       .leadContainer {
         /* height fixes jumping issue on initial load */
-        height: 164px;
+        /* height: 164px; */
       }
 
       .contentContainer {

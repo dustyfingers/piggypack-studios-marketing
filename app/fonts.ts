@@ -2,7 +2,7 @@ import { Kalnia } from "next/font/google";
 import localFont from "next/font/local";
 
 const logoFont = localFont({
-  src: "fonts/ElfEmmaAndTheTinySpider.otf",
+  src: "fonts/alleana-script.regular.otf",
   display: "swap",
   variable: "--font-logo",
 });
