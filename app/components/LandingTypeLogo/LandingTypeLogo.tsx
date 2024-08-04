@@ -1,34 +1,28 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import style from "./component.module.css";
 
 import { AnimationSequence, stagger, useAnimate } from "framer-motion";
 
-const staggerPaths = stagger(0.1, { startDelay: 0.25 });
-
 const LandingTypeLogo = () => {
   const [scope, animate] = useAnimate();
-  const paths = document.getElementsByClassName(style.letterPath);
+  const [started, setStarted] = useState();
 
   useEffect(() => {
-    if (paths) {
-      const sequence: AnimationSequence = [];
-      for (let i = 0; i < paths.length; i++) {
-        sequence.push([
-          paths[i],
-          {
-            pathLength: 1,
-          },
-          {
-            // from: 0,
-            duration: 2,
-          },
-        ]);
-      }
-      console.log(sequence);
-      animate(sequence);
-    }
+    const sequence: AnimationSequence = [
+      [
+        style.letterPath,
+        {
+          pathLength: 1,
+        },
+        {
+          duration: 2,
+          delay: stagger(0.1),
+        },
+      ],
+    ];
+    animate(sequence);
   }, []);
 
   return (
