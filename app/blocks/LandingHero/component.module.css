@@ -2,9 +2,10 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
+
   justify-content: center;
-  scroll-snap-align: start;
+  scroll-snap-align: flex-start;
   /* linear gradient between the two pinks */
   background: rgb(255, 196, 207);
   background: linear-gradient(
@@ -16,20 +17,13 @@
   position: relative;
 
   .landingGrid {
+    margin-top: 50px;
     display: grid;
     gap: 1rem;
     justify-items: center;
     align-items: center;
     .leadContainer {
-      /* height fixes jumping issue on initial load */
-      /* height: 121.16px; */
-      cursor: pointer;
-      font-size: 128px;
-      text-align: center;
       width: 100%;
-
-      .leadWrapper {
-      }
     }
     .contentContainer {
       text-align: center;
@@ -43,10 +37,7 @@
 @media (min-width: 701px) {
   .landingHero {
     .landingGrid {
-      .leadContainer {
-        /* height fixes jumping issue on initial load */
-        /* height: 164px; */
-      }
+      margin-top: 61px;
 
       .contentContainer {
         font-size: 36px;
