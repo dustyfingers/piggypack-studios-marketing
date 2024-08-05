@@ -45,7 +45,7 @@ const TextImageSection = ({
         variants={sectionVariants}
       >
         <div className={style.contentContainer}>
-          <h4 className={style.title}>{title}</h4>
+          <h2 className={style.title}>{title}</h2>
           <p className={style.text}>{text}</p>
         </div>
         <div className={style.imageAndBorderContainer}>
@@ -71,7 +71,7 @@ const WhatWeDo = () => {
     <section className={style.whatWeDo}>
       <ContentContainer>
         <div className={style.content}>
-          <h2 className={style.title}>WHAT WE DO</h2>
+          <h1 className={style.title}>WHAT WE DO</h1>
           <p className={style.text}>
             We help businesses establish and maintain their online presence. We
             help businesses find their brand&apos;s unique voice. blah blah
