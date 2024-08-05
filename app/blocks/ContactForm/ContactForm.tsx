@@ -76,26 +76,40 @@ const ContactForm = () => {
               onClick={() =>
                 setInterestItems([...interestItems, "E-Commerce Site"])
               }
+              className={style.gridButton}
             />
-            <input type="button" value="Brand Development" />
+            <input
+              type="button"
+              value="Brand Development"
+              className={style.gridButton}
+            />
             <input
               type="button"
               value="Website Upgrades, Hosting and Maintenance"
+              className={style.gridButton}
             />
             <input
               type="button"
               value="Social Media Marketing and Management"
+              className={style.gridButton}
             />
-            <input type="button" value="Marketing Site" />
-            <input type="button" value="Not Sure" />
+            <input
+              type="button"
+              value="Marketing Site"
+              className={style.gridButton}
+            />
+            <input
+              type="button"
+              value="Not Sure"
+              className={style.gridButton}
+            />
           </div>
           {/* estimated budget */}
           <label className={style.gridLabel}>My budget is around...</label>
           <div className={style.budgetGrid}>
-            <input type="button" value="<5K" />
-            <input type="button" value="5K-10K" />
-            <input type="button" value="10K-25K" />
-            <input type="button" value="25K+" />
+            <input type="button" value="5K-10K" className={style.gridButton} />
+            <input type="button" value="10K-25K" className={style.gridButton} />
+            <input type="button" value="25K+" className={style.gridButton} />
           </div>
           <input type="submit" value="submit" className={style.submitButton} />
         </form>

@@ -29,6 +29,27 @@
       }
     }
 
+    .gridLabel {
+      margin-bottom: 0.5rem;
+    }
+    .interestGrid,
+    .budgetGrid {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .gridButton {
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.33rem;
+        font-family: var(--font-body);
+        color: var(--cream);
+        background: transparent;
+        border: 1px solid var(--cream);
+      }
+    }
+
     .submitButton {
       padding: 0.5rem 0.25rem;
       border-radius: 0.33rem;
