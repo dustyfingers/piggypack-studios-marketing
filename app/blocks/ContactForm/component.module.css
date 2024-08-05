@@ -27,6 +27,9 @@
         border: none;
         border-bottom: 1px solid var(--cream);
       }
+      /* .formInput:focus {
+        border: none;
+      } */
     }
 
     .gridLabel {
@@ -57,6 +60,13 @@
       color: var(--cream);
       background: transparent;
       border: 1px solid var(--cream);
+      cursor: pointer;
+    }
+
+    .submitButton:hover {
+      transition: 0.3s ease-out;
+      color: rgba(0, 0, 0, 0);
+      background: var(--cream);
     }
   }
 }
