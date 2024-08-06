@@ -2,19 +2,19 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: start;
-
+  align-items: center;
   justify-content: center;
   scroll-snap-align: flex-start;
-  /* linear gradient between the two pinks */
-  background: rgb(255, 196, 207);
-  background: linear-gradient(
-    155deg,
-    rgba(255, 196, 207, 1) 0%,
-    rgba(246, 177, 177, 1) 100%
-  );
   color: var(--cream);
   position: relative;
+
+  .bgVideo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -99;
+  }
 
   .landingGrid {
     margin-top: 50px;
@@ -22,9 +22,6 @@
     gap: 1rem;
     justify-items: center;
     align-items: center;
-    .leadContainer {
-      width: 100%;
-    }
     .contentContainer {
       text-align: center;
       font-size: 24px;
@@ -36,6 +33,7 @@
 /* Tablet and Above */
 @media (min-width: 701px) {
   .landingHero {
+    align-items: flex-start;
     .landingGrid {
       margin-top: 61px;
 

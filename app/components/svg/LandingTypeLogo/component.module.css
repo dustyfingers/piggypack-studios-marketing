@@ -1,0 +1,5 @@
+.landingLogo {
+  width: 100%;
+  mix-blend-mode: difference;
+  fill: var(--cream);
+}
