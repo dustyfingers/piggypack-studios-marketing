@@ -51,6 +51,12 @@
         background: transparent;
         border: 1px solid var(--cream);
       }
+
+      .activeGridButton {
+        transition: 0.3s ease-out;
+        background: var(--cream);
+        color: black;
+      }
     }
 
     .submitButton {
@@ -65,8 +71,8 @@
 
     .submitButton:hover {
       transition: 0.3s ease-out;
-      color: rgba(0, 0, 0, 0);
       background: var(--cream);
+      color: black;
     }
   }
 }

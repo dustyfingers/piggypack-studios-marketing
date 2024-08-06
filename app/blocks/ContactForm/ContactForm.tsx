@@ -33,6 +33,18 @@ const ContactForm = () => {
   };
 
   const [interestItems, setInterestItems] = useState<string[]>([]);
+  const [budget, setBudget] = useState<string>();
+
+  const handleInterestItemsChange = (interestItem: string) => {
+    let newInterestItems: string[] = [];
+    if (interestItems.includes(interestItem)) {
+      newInterestItems = interestItems.filter((item) => item !== interestItem);
+    } else {
+      newInterestItems = interestItems;
+      newInterestItems.push(interestItem);
+    }
+    setInterestItems(newInterestItems);
+  };
 
   return (
     <section className={style.formContainer}>
@@ -45,8 +57,9 @@ const ContactForm = () => {
               className={style.formInput}
               placeholder="John Smith"
             />
+            {errors.name && <span>Name is required</span>}
           </label>
-          {errors.name && <span>This field is required</span>}
+
           <label className={style.formInputContainer}>
             <span className={style.formLabel}>Email:</span>
             <input
@@ -55,8 +68,9 @@ const ContactForm = () => {
               className={style.formInput}
               placeholder="johnsmith@email.com"
             />
+            {errors.email && <span>Email is required</span>}
           </label>
-          {errors.email && <span>This field is required</span>}
+
           <label className={style.formInputContainer}>
             <span className={style.formLabel}>Message:</span>
             <input
@@ -65,43 +79,79 @@ const ContactForm = () => {
               className={style.formInput}
               placeholder="Tell us about your project..."
             />
+            {errors.message && <span>Message is required</span>}
           </label>
-          {errors.message && <span>This field is required</span>}
+
           {/* types of service interested in */}
           <label className={style.gridLabel}>I am looking for...</label>
           <div className={style.interestGrid}>
             <input
               type="button"
               value="E-Commerce Site"
-              onClick={() =>
-                setInterestItems([...interestItems, "E-Commerce Site"])
-              }
-              className={style.gridButton}
+              onClick={() => handleInterestItemsChange("E-Commerce Site")}
+              className={`${style.gridButton} ${
+                interestItems.includes("E-Commerce Site")
+                  ? style.activeGridButton
+                  : ""
+              }`}
             />
             <input
               type="button"
               value="Brand Development"
-              className={style.gridButton}
+              onClick={() => handleInterestItemsChange("Brand Development")}
+              className={`${style.gridButton} ${
+                interestItems.includes("Brand Development")
+                  ? style.activeGridButton
+                  : ""
+              }`}
             />
             <input
               type="button"
               value="Website Upgrades, Hosting and Maintenance"
-              className={style.gridButton}
+              onClick={() =>
+                handleInterestItemsChange(
+                  "Website Upgrades, Hosting and Maintenance"
+                )
+              }
+              className={`${style.gridButton} ${
+                interestItems.includes(
+                  "Website Upgrades, Hosting and Maintenance"
+                )
+                  ? style.activeGridButton
+                  : ""
+              }`}
             />
             <input
               type="button"
               value="Social Media Marketing and Management"
-              className={style.gridButton}
+              onClick={() =>
+                handleInterestItemsChange(
+                  "Social Media Marketing and Management"
+                )
+              }
+              className={`${style.gridButton} ${
+                interestItems.includes("Social Media Marketing and Management")
+                  ? style.activeGridButton
+                  : ""
+              }`}
             />
             <input
               type="button"
               value="Marketing Site"
-              className={style.gridButton}
+              onClick={() => handleInterestItemsChange("Marketing Site")}
+              className={`${style.gridButton} ${
+                interestItems.includes("Marketing Site")
+                  ? style.activeGridButton
+                  : ""
+              }`}
             />
             <input
               type="button"
               value="Not Sure"
-              className={style.gridButton}
+              onClick={() => handleInterestItemsChange("Not Sure")}
+              className={`${style.gridButton} ${
+                interestItems.includes("Not Sure") ? style.activeGridButton : ""
+              }`}
             />
           </div>
           {/* estimated budget */}

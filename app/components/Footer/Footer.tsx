@@ -39,7 +39,7 @@ const Footer = () => {
               <Link href="/about-us">About Us</Link>
             </li>
             <li className={style.footerListItem}>
-              <Link href="/our-work">Our Work</Link>
+              <Link href="/our-work">Projects</Link>
             </li>
             <li className={style.footerListItem}>
               <Link href="/work-with-us">Work With Us</Link>

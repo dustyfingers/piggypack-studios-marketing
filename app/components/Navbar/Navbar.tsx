@@ -19,7 +19,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className={style.navItem}>
-              <Link href="/our-work">Our Work</Link>
+              <Link href="/our-work">Projects</Link>
             </li>
             <li className={style.navItem}>
               <Link href="/work-with-us">Work With Us</Link>
