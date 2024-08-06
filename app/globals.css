@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-logo);
-  line-height: 0.9;
+  /* line-height: 0.9; */
 }
 
 p,
