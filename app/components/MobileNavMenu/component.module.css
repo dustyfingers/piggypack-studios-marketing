@@ -1,20 +1,25 @@
 .mobileNavMenuContainer {
   position: relative;
+
   .mobileNavMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     width: 100%;
-    margin: auto;
     background: var(--blue);
-    border-radius: 0.25rem;
+    border-radius: 0.33rem;
     color: var(--cream);
     transition: ease all 0.4s;
+    padding: 0.5rem 0;
+
+    .navItem {
+      padding: 0.5rem;
+    }
   }
 
   .mobileNavClosed {
-    top: -300px;
+    top: -250px;
   }
 
   .mobileNavOpen {
