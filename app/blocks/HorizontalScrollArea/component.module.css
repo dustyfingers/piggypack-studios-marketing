@@ -48,6 +48,59 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .imageContainer {
+          position: relative;
+          /* border: 1px solid gold; */
+
+          .image {
+            /* border: 1px solid green; */
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .content {
+            mix-blend-mode: difference;
+            /* border: 1px solid red; */
+            position: absolute;
+            width: 75%;
+            bottom: 0.25rem;
+            left: 0.25rem;
+            /* transform: translate(0, 25%); */
+          }
+
+          .contentTop {
+            top: 0.25rem;
+          }
+          .contentLeft {
+            left: 0.25rem;
+          }
+          .contentBottom {
+            bottom: 0.25rem;
+          }
+          .contentRight {
+            right: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 701px) {
+  .horizontalScrollSection {
+    .stickyArea {
+      .scrollableArea {
+        .scrollSection {
+          .imageContainer {
+            .image {
+            }
+
+            .content {
+              width: 50%;
+            }
+          }
+        }
       }
     }
   }

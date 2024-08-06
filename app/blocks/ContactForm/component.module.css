@@ -30,6 +30,16 @@
       /* .formInput:focus {
         border: none;
       } */
+
+      .formError {
+        margin-top: 0.25rem;
+      }
+
+      .formInput:focus {
+        outline: none;
+        background: var(--cream);
+        color: rgba(0, 0, 0, 0.5);
+      }
     }
 
     .gridLabel {
@@ -50,6 +60,7 @@
         color: var(--cream);
         background: transparent;
         border: 1px solid var(--cream);
+        text-wrap: wrap;
       }
 
       .activeGridButton {
@@ -57,22 +68,6 @@
         background: var(--cream);
         color: black;
       }
-    }
-
-    .submitButton {
-      padding: 0.5rem 0.25rem;
-      border-radius: 0.33rem;
-      font-family: var(--font-body);
-      color: var(--cream);
-      background: transparent;
-      border: 1px solid var(--cream);
-      cursor: pointer;
-    }
-
-    .submitButton:hover {
-      transition: 0.3s ease-out;
-      background: var(--cream);
-      color: black;
     }
   }
 }
@@ -82,10 +77,10 @@
     .contactForm {
       max-width: 700px;
 
-      .submitButton {
+      /* .submitButton {
         width: fit-content;
         padding: 0.5rem;
-      }
+      } */
     }
   }
 }

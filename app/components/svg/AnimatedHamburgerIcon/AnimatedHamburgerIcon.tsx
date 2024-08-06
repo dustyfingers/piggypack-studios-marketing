@@ -13,7 +13,7 @@ interface IStripe {
   $first?: boolean;
 }
 
-const Hamburger = styled.button`
+const Hamburger = styled.div`
   border: none;
   background: none;
   width: ${hamburgerWidth}px;

@@ -1,8 +1,10 @@
 "use client";
+import { useState } from "react";
+import ReactiveButton from "reactive-button";
 import { SubmitHandler, useForm } from "react-hook-form";
+
 import style from "./component.module.css";
 import ContentContainer from "@/app/components/ContentContainer/ContentContainer";
-import { useState } from "react";
 
 type Inputs = {
   name: string;
@@ -11,6 +13,7 @@ type Inputs = {
 };
 
 const ContactForm = () => {
+  const [buttonState, setButtonState] = useState<string>("idle");
   const {
     register,
     handleSubmit,
@@ -18,6 +21,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setButtonState("loading");
     const res = await fetch("/api/work-with-us", {
       method: "POST",
       body: JSON.stringify(data),
@@ -26,6 +30,7 @@ const ContactForm = () => {
     try {
       const resJson = await res.json();
       console.log(resJson.body);
+      setButtonState("success");
     } catch (err) {
       console.log({ err });
     }
@@ -54,7 +59,9 @@ const ContactForm = () => {
               className={style.formInput}
               placeholder="John Smith"
             />
-            {errors.name && <span>Name is required</span>}
+            {errors.name && (
+              <span className={style.formError}>Name is required</span>
+            )}
           </label>
 
           <label className={style.formInputContainer}>
@@ -65,7 +72,9 @@ const ContactForm = () => {
               className={style.formInput}
               placeholder="johnsmith@email.com"
             />
-            {errors.email && <span>Email is required</span>}
+            {errors.email && (
+              <span className={style.formError}>Email is required</span>
+            )}
           </label>
 
           <label className={style.formInputContainer}>
@@ -76,35 +85,38 @@ const ContactForm = () => {
               className={style.formInput}
               placeholder="Tell us about your project..."
             />
-            {errors.message && <span>Message is required</span>}
+            {errors.message && (
+              <span className={style.formError}>Message is required</span>
+            )}
           </label>
 
           {/* types of service interested in */}
           <label className={style.gridLabel}>I am looking for...</label>
           <div className={style.interestGrid}>
-            <input
+            <button
               type="button"
-              value="E-Commerce Site"
               onClick={() => handleInterestItemsChange("E-Commerce Site")}
               className={`${style.gridButton} ${
                 interestItems.includes("E-Commerce Site")
                   ? style.activeGridButton
                   : ""
               }`}
-            />
-            <input
+            >
+              E-Commerce Site
+            </button>
+            <button
               type="button"
-              value="Brand Development"
               onClick={() => handleInterestItemsChange("Brand Development")}
               className={`${style.gridButton} ${
                 interestItems.includes("Brand Development")
                   ? style.activeGridButton
                   : ""
               }`}
-            />
-            <input
+            >
+              Brand Development
+            </button>
+            <button
               type="button"
-              value="Website Upgrades, Hosting and Maintenance"
               onClick={() =>
                 handleInterestItemsChange(
                   "Website Upgrades, Hosting and Maintenance"
@@ -117,10 +129,11 @@ const ContactForm = () => {
                   ? style.activeGridButton
                   : ""
               }`}
-            />
-            <input
+            >
+              Website Upgrades, Hosting and Maintenance
+            </button>
+            <button
               type="button"
-              value="Social Media Marketing and Management"
               onClick={() =>
                 handleInterestItemsChange(
                   "Social Media Marketing and Management"
@@ -131,35 +144,81 @@ const ContactForm = () => {
                   ? style.activeGridButton
                   : ""
               }`}
-            />
-            <input
+            >
+              Social Media Marketing and Management
+            </button>
+            <button
               type="button"
-              value="Marketing Site"
+              value=""
               onClick={() => handleInterestItemsChange("Marketing Site")}
               className={`${style.gridButton} ${
                 interestItems.includes("Marketing Site")
                   ? style.activeGridButton
                   : ""
               }`}
-            />
-            <input
+            >
+              Marketing Site
+            </button>
+            <button
               type="button"
-              value="Not Sure"
               onClick={() => handleInterestItemsChange("Not Sure")}
               className={`${style.gridButton} ${
                 interestItems.includes("Not Sure") ? style.activeGridButton : ""
               }`}
-            />
+            >
+              Not Sure
+            </button>
           </div>
           {/* estimated budget */}
           <label className={style.gridLabel}>My budget is around...</label>
           <div className={style.budgetGrid}>
-            <input type="button" value="<5K" className={style.gridButton} />
-            <input type="button" value="5K-10K" className={style.gridButton} />
-            <input type="button" value="10K-25K" className={style.gridButton} />
-            <input type="button" value="25K+" className={style.gridButton} />
+            <button
+              type="button"
+              className={`${style.gridButton} ${
+                budget === "<5K" ? style.activeGridButton : ""
+              }`}
+              onClick={() => setBudget("<5K")}
+            >
+              &gt;5K
+            </button>
+            <button
+              type="button"
+              className={`${style.gridButton} ${
+                budget === "5K-10K" ? style.activeGridButton : ""
+              }`}
+              onClick={() => setBudget("5K-10K")}
+            >
+              5K-10K
+            </button>
+            <button
+              type="button"
+              className={`${style.gridButton} ${
+                budget === "10K-25K" ? style.activeGridButton : ""
+              }`}
+              onClick={() => setBudget("10K-25K")}
+            >
+              10K-25K
+            </button>
+            <button
+              type="button"
+              className={`${style.gridButton} ${
+                budget === "25K+" ? style.activeGridButton : ""
+              }`}
+              onClick={() => setBudget("25K+")}
+            >
+              25K+
+            </button>
           </div>
-          <input type="submit" value="submit" className={style.submitButton} />
+          <ReactiveButton
+            outline
+            type="submit"
+            buttonState={buttonState}
+            idleText="submit"
+            loadingText="loading..."
+            successText="success!"
+            className={style.submitButton}
+            // block={false}
+          />
         </form>
       </ContentContainer>
     </section>
