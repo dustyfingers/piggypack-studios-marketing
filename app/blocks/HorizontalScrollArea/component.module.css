@@ -64,9 +64,6 @@
             /* border: 1px solid red; */
             position: absolute;
             width: 75%;
-            bottom: 0.25rem;
-            left: 0.25rem;
-            /* transform: translate(0, 25%); */
           }
 
           .contentTop {
@@ -80,6 +77,7 @@
           }
           .contentRight {
             right: 0.25rem;
+            text-align: right;
           }
         }
       }
