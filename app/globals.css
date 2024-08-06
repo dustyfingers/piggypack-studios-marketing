@@ -85,7 +85,12 @@ button:hover {
   --reactive-button-violet-color: rgba(100, 53, 201, 1) !important;
   --reactive-button-blue-color: rgba(66, 153, 225, 1) !important;
 
-  --reactive-progress-outline-primary-color: rgba(88, 103, 221, 0.3) !important;
+  --reactive-progress-outline-primary-color: rgba(
+    243,
+    249,
+    227,
+    0.3
+  ) !important;
   --reactive-progress-outline-secondary-color: rgba(
     108,
     117,

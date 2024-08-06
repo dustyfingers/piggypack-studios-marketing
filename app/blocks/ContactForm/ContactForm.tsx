@@ -108,7 +108,9 @@ const GridButton = ({
     <button
       type="button"
       className={`${style.gridButton} ${
-        stateValue === value ? style.activeGridButton : ""
+        stateValue === value || stateValue?.includes(value)
+          ? style.activeGridButton
+          : ""
       }`}
       onClick={() => handleChange(value)}
     >
@@ -145,7 +147,6 @@ const ContactForm = () => {
   const [budget, setBudget] = useState<string>();
 
   const handleInterestItemsChange = (interestItem: string) => {
-    console.log("running...!");
     setInterestItems(
       interestItems.includes(interestItem)
         ? interestItems.filter((item) => item !== interestItem)
