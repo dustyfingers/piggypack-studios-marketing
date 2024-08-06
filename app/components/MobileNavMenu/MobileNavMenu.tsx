@@ -5,9 +5,11 @@ import Link from "next/link";
 
 import style from "./component.module.css";
 import { useMobileNavMenuContext } from "@/app/context/MobileNavMenu";
+import { usePathname } from "next/navigation";
 
 const MobileNavMenu = () => {
   const [mobileNavMenu, setMobileNavMenu] = useMobileNavMenuContext();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window !== "undefined")
@@ -15,6 +17,10 @@ const MobileNavMenu = () => {
         window.innerWidth > 700 && setMobileNavMenu({ isOpen: false });
       });
   }, []);
+
+  useEffect(() => {
+    setMobileNavMenu({ isOpen: false });
+  }, [pathname]);
 
   return (
     <div className={style.mobileNavMenuContainer}>
