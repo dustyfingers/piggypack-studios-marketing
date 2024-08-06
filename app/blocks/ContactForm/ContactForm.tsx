@@ -36,14 +36,11 @@ const ContactForm = () => {
   const [budget, setBudget] = useState<string>();
 
   const handleInterestItemsChange = (interestItem: string) => {
-    let newInterestItems: string[] = [];
-    if (interestItems.includes(interestItem)) {
-      newInterestItems = interestItems.filter((item) => item !== interestItem);
-    } else {
-      newInterestItems = interestItems;
-      newInterestItems.push(interestItem);
-    }
-    setInterestItems(newInterestItems);
+    setInterestItems(
+      interestItems.includes(interestItem)
+        ? interestItems.filter((item) => item !== interestItem)
+        : [...interestItems, interestItem]
+    );
   };
 
   return (
@@ -157,6 +154,7 @@ const ContactForm = () => {
           {/* estimated budget */}
           <label className={style.gridLabel}>My budget is around...</label>
           <div className={style.budgetGrid}>
+            <input type="button" value="<5K" className={style.gridButton} />
             <input type="button" value="5K-10K" className={style.gridButton} />
             <input type="button" value="10K-25K" className={style.gridButton} />
             <input type="button" value="25K+" className={style.gridButton} />
