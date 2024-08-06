@@ -122,7 +122,6 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -146,6 +145,7 @@ const ContactForm = () => {
   const [budget, setBudget] = useState<string>();
 
   const handleInterestItemsChange = (interestItem: string) => {
+    console.log("running...!");
     setInterestItems(
       interestItems.includes(interestItem)
         ? interestItems.filter((item) => item !== interestItem)
@@ -158,7 +158,12 @@ const ContactForm = () => {
       <ContentContainer>
         <form className={style.contactForm} onSubmit={handleSubmit(onSubmit)}>
           {formInputInfo.map((info) => (
-            <FormInput {...info} register={register} errors={errors} />
+            <FormInput
+              {...info}
+              register={register}
+              errors={errors}
+              key={info.value}
+            />
           ))}
           <label className={style.gridLabel}>I am looking for...</label>
           <div className={style.interestGrid}>
@@ -167,6 +172,7 @@ const ContactForm = () => {
                 {...info}
                 stateValue={interestItems}
                 handleChange={handleInterestItemsChange}
+                key={info.value}
               />
             ))}
           </div>
@@ -177,6 +183,7 @@ const ContactForm = () => {
                 {...info}
                 stateValue={budget}
                 handleChange={setBudget}
+                key={info.value}
               />
             ))}
           </div>
