@@ -7,6 +7,12 @@ const logoFont = localFont({
   variable: "--font-logo",
 });
 
+const headerFont = localFont({
+  src: "fonts/Babyground.ttf",
+  display: "swap",
+  variable: "--font-header",
+});
+
 export const bodyFont = Kalnia({
   subsets: ["latin"],
   display: "swap",
@@ -15,6 +21,7 @@ export const bodyFont = Kalnia({
 
 const fonts = {
   logoFont,
+  headerFont,
   bodyFont,
 };
 

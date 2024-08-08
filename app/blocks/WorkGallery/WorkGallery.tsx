@@ -17,6 +17,7 @@ import {
 } from "@react-three/drei";
 import { proxy, useSnapshot } from "valtio";
 import { easing } from "maath";
+import styled from "styled-components";
 
 import ContentContainer from "@/app/components/ContentContainer/ContentContainer";
 import style from "./component.module.css";
@@ -182,16 +183,22 @@ const Items = ({ w, gap }: IItems) => {
   );
 };
 
+const StyledCanvas = styled(Canvas)`
+  canvas {
+    border: 1px solid blue;
+    height: 450px;
+  }
+`;
+
 const WorkCarousel = () => {
   return (
-    <Canvas
+    <StyledCanvas
       gl={{ antialias: false }}
       dpr={[1, 1.5]}
       onPointerMissed={() => (state.clicked = null)}
-      className={style.galleryCanvas}
     >
       <Items w={0.7} gap={0.15} />
-    </Canvas>
+    </StyledCanvas>
   );
 };
 

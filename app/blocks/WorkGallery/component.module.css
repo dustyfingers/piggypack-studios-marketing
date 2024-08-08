@@ -5,11 +5,6 @@
   align-items: center;
   justify-content: center;
   border: 1px solid green;
-
-  .galleryCanvas {
-    border: 1px dashed palevioletred;
-    height: 250px;
-  }
 }
 
 @media (min-width: 701px) {

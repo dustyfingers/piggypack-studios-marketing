@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fonts.bodyFont.variable} ${fonts.logoFont.variable} antialiased`}
+      className={`${fonts.bodyFont.variable} ${fonts.logoFont.variable} ${fonts.headerFont.variable} antialiased`}
     >
       <body>
         <MobileNavMenuProvider>

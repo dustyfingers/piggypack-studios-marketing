@@ -18,6 +18,10 @@
     margin: 0.5rem 0;
     /* mix-blend-mode: difference; */
 
+    .logo {
+      font-family: var(--font-logo);
+    }
+
     .navMenu {
       display: none;
       align-items: center;

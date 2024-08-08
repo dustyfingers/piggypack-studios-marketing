@@ -71,7 +71,7 @@ const WhatWeDo = () => {
     <section className={style.whatWeDo}>
       <ContentContainer>
         <div className={style.content}>
-          <h1 className={style.title}>WHAT WE DO</h1>
+          <h1 className={style.title}>What We Do</h1>
           <p className={style.text}>
             We help businesses establish and maintain their online presence. We
             help businesses find their brand&apos;s unique voice. blah blah
