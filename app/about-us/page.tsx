@@ -12,8 +12,8 @@ export default function AboutUsPage() {
         subhead="Learn more about what makes Piggyback Studios tick"
       />
       <AboutUs />
-      <WhatWeDo />
       <OurImpact />
+      <WhatWeDo />
     </main>
   );
 }

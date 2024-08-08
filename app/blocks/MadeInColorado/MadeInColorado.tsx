@@ -8,8 +8,8 @@ const MadeInColorado = () => {
     <section className={style.madeInColorado}>
       <ContentContainer>
         <div className={style.contentWrapper}>
-          {/* <PikesPeak /> will probably move into another smaller component */}
-          <ColoradoCountyMap />
+          <PikesPeak />
+          {/* <ColoradoCountyMap /> */}
           <h2>Made In Colorado</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia

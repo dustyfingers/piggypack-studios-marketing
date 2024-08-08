@@ -75,7 +75,11 @@ const WhatWeDo = () => {
           <p className={style.text}>
             We help businesses establish and maintain their online presence. We
             help businesses find their brand&apos;s unique voice. blah blah
-            blah.
+            blah. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus
+            pretium quam vulputate dignissim suspendisse. Donec adipiscing
+            tristique risus nec feugiat in fermentum posuere urna. Eget mi proin
+            sed libero enim.
           </p>
         </div>
 
