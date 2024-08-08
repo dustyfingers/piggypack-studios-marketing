@@ -4,4 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
+}
+
+@media (min-width: 701px) {
+  .aboutUs {
+    padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
+  }
 }

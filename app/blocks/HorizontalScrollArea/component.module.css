@@ -15,6 +15,7 @@
   position: initial;
   background: var(--blue);
   color: var(--cream);
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
 
   view-timeline-name: --section-pin-tl;
   view-timeline-axis: block;
@@ -87,6 +88,7 @@
 
 @media (min-width: 701px) {
   .horizontalScrollSection {
+    padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
     .stickyArea {
       .scrollableArea {
         .scrollSection {

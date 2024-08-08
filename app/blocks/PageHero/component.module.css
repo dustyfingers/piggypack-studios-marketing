@@ -1,12 +1,11 @@
 .pageHero {
-  margin-top: 2rem;
-  padding: 3rem 0;
   scroll-snap-align: start;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--cream);
+  padding: calc(var(--mobileNavHeight) + 1rem) 0 var(--mobileBlockYPadding) 0;
 
   .pageHeadline {
     margin-bottom: 1rem;
@@ -15,6 +14,7 @@
 
 @media (min-width: 701px) {
   .pageHero {
-    margin-top: 38px;
+    padding: calc(var(--desktopNavHeight) + 1rem) 0 var(--desktopBlockYPadding)
+      0;
   }
 }

@@ -6,6 +6,7 @@
   scroll-snap-align: start;
   color: var(--cream);
   font-family: var(--font-body);
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
 
   .contactForm {
     display: flex;
@@ -74,6 +75,7 @@
 
 @media (min-width: 701px) {
   .formContainer {
+    padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
     .contactForm {
       max-width: 700px;
 

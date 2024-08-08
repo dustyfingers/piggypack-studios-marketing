@@ -5,7 +5,7 @@
   justify-content: center;
   flex-direction: column;
   background: var(--cream);
-  padding: 4rem 0;
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
   scroll-snap-align: start;
 
   .content {
@@ -58,6 +58,7 @@
 /* tablet and up */
 @media (min-width: 701px) {
   .whatWeDo {
+    padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
     .gallery {
       gap: 5rem;
       .textImageSection {

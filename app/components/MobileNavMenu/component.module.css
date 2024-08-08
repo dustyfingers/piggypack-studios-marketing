@@ -27,7 +27,7 @@
     }
 
     .mobileNavOpen {
-      top: 54px;
+      top: var(--mobileNavHeight);
     }
   }
 }

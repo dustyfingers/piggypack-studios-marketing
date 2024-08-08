@@ -8,6 +8,7 @@
   color: var(--cream);
   padding: 4rem 0;
   scroll-snap-align: start;
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
 
   .impactGrid {
     display: grid;
@@ -16,5 +17,11 @@
     .impactGridItem {
       border: 1px solid red;
     }
+  }
+}
+
+@media (min-width: 701px) {
+  .impactSection {
+    padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
   }
 }

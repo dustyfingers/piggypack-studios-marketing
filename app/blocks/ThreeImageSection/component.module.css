@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 4rem 0;
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
   scroll-snap-align: start;
 
   .threeImageGrid {
@@ -20,6 +20,7 @@
 
 @media (min-width: 701px) {
   .threeImageSection {
+    padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
     .threeImageGrid {
       grid-template-columns: repeat(3, 1fr);
     }

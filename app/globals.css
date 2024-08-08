@@ -5,8 +5,13 @@
   --dkbrown: #c19d78;
   --cream: #f3f9e3;
   --blue: #325c6b;
+  --mobileNavHeight: 54px;
+  --desktopNavHeight: 67px;
+  --mobileBlockYPadding: 2rem;
+  --desktopBlockYPadding: 3rem;
 }
 
+/* TODO: implement dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     /* vars here */
@@ -32,6 +37,7 @@ h5,
 h6 {
   font-family: var(--font-header);
   font-weight: 500;
+  line-height: 0.625;
 }
 
 p,
