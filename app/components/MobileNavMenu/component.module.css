@@ -1,6 +1,5 @@
 .mobileNavMenuContainer {
   position: relative;
-  margin-top: 54px;
 
   .fixedContainer {
     position: fixed;
@@ -28,7 +27,7 @@
     }
 
     .mobileNavOpen {
-      top: 10px;
+      top: 54px;
     }
   }
 }
