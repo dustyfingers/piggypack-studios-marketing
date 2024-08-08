@@ -1,5 +1,4 @@
 import ContentContainer from "../ContentContainer/ContentContainer";
-import MobileNavMenu from "../MobileNavMenu";
 import AnimatedHamburgerIcon from "../svg/AnimatedHamburgerIcon";
 import style from "./component.module.css";
 import Link from "next/link";
@@ -27,7 +26,6 @@ const Navbar = () => {
           </ul>
           <AnimatedHamburgerIcon />
         </div>
-        <MobileNavMenu />
       </ContentContainer>
     </nav>
   );

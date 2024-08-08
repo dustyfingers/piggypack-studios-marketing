@@ -24,23 +24,25 @@ const MobileNavMenu = () => {
 
   return (
     <div className={style.mobileNavMenuContainer}>
-      <ul
-        className={`${
-          mobileNavMenu.isOpen ? style.mobileNavOpen : style.mobileNavClosed
-        } ${style.mobileNavMenu}`}
-      >
-        <li className={style.navItem}>
-          <Link href="/about-us" className={style.navItemLink}>
-            About Us
-          </Link>
-        </li>
-        <li className={style.navItem}>
-          <Link href="/our-work">Projects</Link>
-        </li>
-        <li className={style.navItem}>
-          <Link href="/work-with-us">Work With Us</Link>
-        </li>
-      </ul>
+      <div className={style.fixedContainer}>
+        <ul
+          className={`${
+            mobileNavMenu.isOpen ? style.mobileNavOpen : style.mobileNavClosed
+          } ${style.mobileNavMenu}`}
+        >
+          <li className={style.navItem}>
+            <Link href="/about-us" className={style.navItemLink}>
+              About Us
+            </Link>
+          </li>
+          <li className={style.navItem}>
+            <Link href="/our-work">Projects</Link>
+          </li>
+          <li className={style.navItem}>
+            <Link href="/work-with-us">Work With Us</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

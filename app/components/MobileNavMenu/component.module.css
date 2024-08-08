@@ -1,28 +1,34 @@
 .mobileNavMenuContainer {
   position: relative;
+  margin-top: 54px;
 
-  .mobileNavMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    background: var(--blue);
-    border-radius: 0.33rem;
-    color: var(--cream);
-    transition: ease all 0.4s;
-    padding: 0.5rem 0;
+  .fixedContainer {
+    position: fixed;
+    width: calc(100% - 4rem);
+    z-index: 9999;
+    .mobileNavMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      background: var(--blue);
+      border-radius: 0.33rem;
+      color: var(--cream);
+      transition: ease all 0.4s;
+      padding: 0.5rem 0;
 
-    .navItem {
-      padding: 0.5rem;
+      .navItem {
+        padding: 0.5rem;
+      }
     }
-  }
 
-  .mobileNavClosed {
-    top: -250px;
-  }
+    .mobileNavClosed {
+      top: -250px;
+    }
 
-  .mobileNavOpen {
-    top: 10px;
+    .mobileNavOpen {
+      top: 10px;
+    }
   }
 }

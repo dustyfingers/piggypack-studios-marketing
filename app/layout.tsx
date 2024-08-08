@@ -28,6 +28,9 @@ export default function RootLayout({
       <body>
         <MobileNavMenuProvider>
           <Navbar />
+          <ContentContainer>
+            <MobileNavMenu />
+          </ContentContainer>
         </MobileNavMenuProvider>
         {children}
         <Footer />
