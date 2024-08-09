@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import PageHero from "../blocks/PageHero";
-import WorkGallery from "../blocks/WorkGallery";
+import PageHero from "@/app/blocks/PageHero";
+import WorkGallery from "@/app/blocks/WorkGallery";
 
 export default function OurWork() {
   return (

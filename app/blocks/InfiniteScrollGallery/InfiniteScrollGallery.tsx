@@ -1,14 +1,34 @@
+"use client";
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import ProductCard from "./ProductCard";
-import Loader from "./Loader";
 
 import style from "./component.module.css";
+import Image from "next/image";
 
-const InfiniteScrollExample2 = () => {
-  const [items, setItems] = useState([]);
+interface IGalleryTile {
+  data: any;
+}
+const GalleryTile = ({ data }: IGalleryTile) => {
+  console.log(data);
+  return (
+    <Image
+      src={"/images/stock-image.jpg"}
+      alt={"a guy working"}
+      width={512}
+      height={512}
+      className={style.image}
+    />
+  );
+};
+
+const Loader = () => {
+  return <div></div>;
+};
+
+const InfiniteScrollGallery = () => {
+  const [items, setItems] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState<number>(2);
 
   const fetchData = useCallback(async () => {
     if (isLoading) return;
@@ -18,7 +38,7 @@ const InfiniteScrollExample2 = () => {
     axios
       .get(`https://api.escuelajs.co/api/v1/products?offset=${index}0&limit=12`)
       .then((res) => {
-        setItems((prevItems) => [...prevItems, ...res.data]);
+        setItems((prevItems: any[]) => [...prevItems, ...res.data]);
       })
       .catch((err) => console.log(err));
     setIndex((prevIndex) => prevIndex + 1);
@@ -59,14 +79,12 @@ const InfiniteScrollExample2 = () => {
   }, [fetchData]);
 
   return (
-    <div className="container">
-      <div className="row">
-        {items.map((item) => (
-          <ProductCard data={item} key={item.id} />
-        ))}
-      </div>
+    <section className={style.infiniteScrollGallery}>
+      {items.map((item) => (
+        <GalleryTile data={item} key={item.id} />
+      ))}
       {isLoading && <Loader />}
-    </div>
+    </section>
   );
 };
 

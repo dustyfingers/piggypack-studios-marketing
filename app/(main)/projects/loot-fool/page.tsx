@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import PageHero from "../../blocks/PageHero";
-import ThreeImageSection from "../../blocks/ThreeImageSection";
+import PageHero from "../@/app/blocks/PageHero";
+import ThreeImageSection from "../@/app/blocks/ThreeImageSection";
 import VideoHero from "@/app/blocks/VIdeoHero/VideoHero";
 
 export default function WorkWithUs() {

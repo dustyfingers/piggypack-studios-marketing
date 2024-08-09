@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
-import AboutUs from "../blocks/AboutUs";
-import PageHero from "../blocks/PageHero";
-import OurImpact from "../blocks/OurImpact";
-import WhatWeDo from "../blocks/WhatWeDo";
+import AboutUs from "@/app/blocks/AboutUs";
+import PageHero from "@/app/blocks/PageHero";
+import OurImpact from "@/app/blocks/OurImpact";
+import WhatWeDo from "@/app/blocks/WhatWeDo";
 
 export default function AboutUsPage() {
   return (

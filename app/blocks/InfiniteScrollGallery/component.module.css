@@ -1,0 +1,17 @@
+.infiniteScrollGallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 701px) {
+  .infiniteScrollGallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

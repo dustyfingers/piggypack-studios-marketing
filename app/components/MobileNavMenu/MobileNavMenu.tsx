@@ -36,7 +36,7 @@ const MobileNavMenu = () => {
             </Link>
           </li>
           <li className={style.navItem}>
-            <Link href="/our-work" className={style.navItemLink}>
+            <Link href="/projects" className={style.navItemLink}>
               Projects
             </Link>
           </li>

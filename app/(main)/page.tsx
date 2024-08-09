@@ -1,9 +1,9 @@
 "use client";
 import styles from "./page.module.css";
-import LandingHero from "./blocks/LandingHero";
-import WhatWeDo from "./blocks/WhatWeDo";
-import MadeInColorado from "./blocks/MadeInColorado/MadeInColorado";
-import HorizontalScrollArea from "./blocks/HorizontalScrollArea";
+import LandingHero from "@/app/blocks/LandingHero";
+import WhatWeDo from "@/app/blocks/WhatWeDo";
+import MadeInColorado from "@/app/blocks/MadeInColorado/MadeInColorado";
+import HorizontalScrollArea from "@/app/blocks/HorizontalScrollArea";
 
 export default function Home() {
   return (
