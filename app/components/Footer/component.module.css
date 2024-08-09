@@ -12,6 +12,7 @@
 
   .footerContent {
     border: 1px solid var(--cream);
+    border-radius: var(--globalBorderRadius);
     display: grid;
     gap: 1rem;
     padding: 0.5rem;

@@ -56,7 +56,7 @@
 
       .gridButton {
         padding: 0.5rem 0.5rem;
-        border-radius: 0.33rem;
+        border-radius: var(--globalBorderRadius);
         font-family: var(--font-body);
         color: var(--cream);
         background: transparent;

@@ -9,6 +9,7 @@
   --desktopNavHeight: 48px;
   --mobileBlockYPadding: 2rem;
   --desktopBlockYPadding: 3rem;
+  --globalBorderRadius: 0.33rem;
 }
 
 /* TODO: implement dark theme */

@@ -1,5 +1,6 @@
 import ContentContainer from "@/app/components/ContentContainer";
 import style from "./component.module.css";
+import { motion } from "framer-motion";
 
 const LeadsIcon = () => {
   return (

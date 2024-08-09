@@ -1,0 +1,21 @@
+.videoHeroSection {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--blue);
+  color: var(--cream);
+  padding: 4rem 0;
+  scroll-snap-align: start;
+  padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
+  text-align: center;
+
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--globalBorderRadius);
+  }
+}

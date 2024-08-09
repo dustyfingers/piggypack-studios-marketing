@@ -49,6 +49,7 @@
         .image {
           width: 100%;
           object-fit: cover;
+          border-radius: var(--globalBorderRadius);
         }
       }
     }
@@ -67,6 +68,7 @@
         .imageAndBorderContainer {
           .borderContainer {
             border: 1px solid var(--ltbrown);
+            border-radius: var(--globalBorderRadius);
             position: relative;
             height: 350px;
             width: 350px;
