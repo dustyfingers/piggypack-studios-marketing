@@ -125,59 +125,59 @@ button:hover {
 
 /* Tablet and Above */
 @media (min-width: 701px) {
-  /* font-sizes - perfect fourth in typescale.com with 16px as a base */
+  /* font-sizes - perfect fourth in typescale.com with 18px as a base */
   h1 {
-    font-size: 89.76px;
+    font-size: 100.98px;
   }
   h2 {
-    font-size: 67.34px;
+    font-size: 75.76px;
   }
   h3 {
-    font-size: 50.52px;
+    font-size: 56.83px;
   }
   h4 {
-    font-size: 37.9px;
+    font-size: 42.63px;
   }
   h5 {
-    font-size: 28.43px;
+    font-size: 31.98px;
   }
   h6 {
-    font-size: 21.33px;
+    font-size: 23.99px;
   }
 
   p,
   a,
   li {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  /* font-sizes - perfect fourth in typescale.com with 12px as a base */
+  /* font-sizes - perfect fourth in typescale.com with 14px as a base */
   h1 {
-    font-size: 67.32px;
+    font-size: 78.54px;
   }
   h2 {
-    font-size: 50.5px;
+    font-size: 58.92px;
   }
   h3 {
-    font-size: 37.89px;
+    font-size: 44.2px;
   }
   h4 {
-    font-size: 28.42px;
+    font-size: 33.16px;
   }
   h5 {
-    font-size: 21.32px;
+    font-size: 24.88px;
   }
   h6 {
-    font-size: 16px;
+    font-size: 18.66px;
   }
 
   p,
   a,
   li {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
