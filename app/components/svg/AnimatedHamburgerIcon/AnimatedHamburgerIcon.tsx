@@ -13,6 +13,13 @@ interface IStripe {
   $first?: boolean;
 }
 
+const HamburgerContainer = styled.div`
+  padding: 0.5rem;
+  @media (min-width: 701px) {
+    display: none;
+  }
+`;
+
 const Hamburger = styled.div`
   border: none;
   background: none;
@@ -35,10 +42,6 @@ const Hamburger = styled.div`
     left: 0;
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
-  }
-
-  @media (min-width: 701px) {
-    display: none;
   }
 `;
 
@@ -70,16 +73,18 @@ const HamburgerIcon = () => {
   const [mobileNavMenu, setMobileNavMenuOpen] = useMobileNavMenuContext();
 
   return (
-    <Hamburger
+    <HamburgerContainer
       onClick={() => {
         setMobileNavMenuOpen({ isOpen: !mobileNavMenu.isOpen });
       }}
     >
-      <StripeTop $open={mobileNavMenu.isOpen || false} />
-      <StripeMiddle $open={mobileNavMenu.isOpen || false} $first />
-      <StripeMiddle $open={mobileNavMenu.isOpen || false} />
-      <StripeBottom $open={mobileNavMenu.isOpen || false} />
-    </Hamburger>
+      <Hamburger>
+        <StripeTop $open={mobileNavMenu.isOpen || false} />
+        <StripeMiddle $open={mobileNavMenu.isOpen || false} $first />
+        <StripeMiddle $open={mobileNavMenu.isOpen || false} />
+        <StripeBottom $open={mobileNavMenu.isOpen || false} />
+      </Hamburger>
+    </HamburgerContainer>
   );
 };
 export default HamburgerIcon;

@@ -13,9 +13,7 @@ const Navbar = () => {
           </Link>
           <ul className={style.navMenu}>
             <li className={style.navItem}>
-              <Link href="/about-us" className={style.navItemLink}>
-                About Us
-              </Link>
+              <Link href="/about-us">About Us</Link>
             </li>
             <li className={style.navItem}>
               <Link href="/our-work">Projects</Link>

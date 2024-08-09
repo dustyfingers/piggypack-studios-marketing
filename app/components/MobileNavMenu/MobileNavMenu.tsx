@@ -36,10 +36,14 @@ const MobileNavMenu = () => {
             </Link>
           </li>
           <li className={style.navItem}>
-            <Link href="/our-work">Projects</Link>
+            <Link href="/our-work" className={style.navItemLink}>
+              Projects
+            </Link>
           </li>
           <li className={style.navItem}>
-            <Link href="/work-with-us">Work With Us</Link>
+            <Link href="/work-with-us" className={style.navItemLink}>
+              Work With Us
+            </Link>
           </li>
         </ul>
       </div>

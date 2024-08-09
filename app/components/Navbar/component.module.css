@@ -9,14 +9,11 @@
   justify-content: center;
   mix-blend-mode: difference;
 
-  /* FIXME: cant seem to get mix-blend-mode to work on this flex container? */
-  /* if i can, i could get the mobile menu in a much better spot */
   .flexContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0.5rem 0;
-    /* mix-blend-mode: difference; */
 
     .logo {
       font-family: var(--font-logo);
