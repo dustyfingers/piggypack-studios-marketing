@@ -24,7 +24,9 @@
       display: grid;
       gap: 1rem;
       justify-items: center;
-
+      background: var(--dkblue);
+      padding: 1rem;
+      border-radius: var(--globalBorderRadius);
       .impactIcon {
         width: 100%;
         min-height: 100px;
