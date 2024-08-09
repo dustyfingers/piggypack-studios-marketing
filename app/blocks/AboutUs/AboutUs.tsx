@@ -10,15 +10,18 @@ const AboutUs = () => {
       <ContentContainer>
         <h2 className={style.aboutUsHeader}>About Us</h2>
         <div className={style.contentGrid}>
-          <div className={style.firstContent}>
+          <div className={`${style.firstContent} ${style.contentArea}`}>
             <Image
               src="/images/stock-image.jpg"
               alt="a guy working..."
               width={256}
               height={256}
+              className={style.headshotImage}
             />
-            <h4>Louie Williford</h4>
-            <h6>Founding Partner, Technical Director</h6>
+            <h4 className={style.name}>Louie Williford</h4>
+            <h6 className={style.position}>
+              Founding Partner, Technical Director
+            </h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ex
               quas officia eum consectetur dolor maxime illum itaque totam
@@ -26,15 +29,18 @@ const AboutUs = () => {
               perferendis! Asperiores, recusandae officiis.
             </p>
           </div>
-          <div className={style.secondContent}>
+          <div className={`${style.secondContent} ${style.contentArea}`}>
             <Image
               src="/images/stock-image.jpg"
               alt="a guy working..."
               width={256}
               height={256}
+              className={style.headshotImage}
             />
-            <h4>Katy Williford</h4>
-            <h6>Founding Partner, Creative Director</h6>
+            <h4 className={style.name}>Katy Williford</h4>
+            <h6 className={style.position}>
+              Founding Partner, Creative Director
+            </h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ex
               quas officia eum consectetur dolor maxime illum itaque totam
