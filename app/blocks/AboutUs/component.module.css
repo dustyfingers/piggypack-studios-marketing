@@ -17,7 +17,7 @@
 
   .firstHalf {
     position: absolute;
-    height: calc(50% + 2rem);
+    height: calc(50%);
     width: 100%;
     top: 0;
     background: var(--blue);
@@ -28,7 +28,7 @@
     position: absolute;
     height: 50%;
     width: 100%;
-    top: calc(50% + 2rem);
+    top: calc(50%);
     background: var(--cream);
     z-index: -99;
   }
@@ -36,7 +36,7 @@
   .contentGrid {
     display: grid;
     width: 100%;
-    gap: 2rem;
+    gap: 4rem;
 
     .firstContent {
       color: var(--cream);
