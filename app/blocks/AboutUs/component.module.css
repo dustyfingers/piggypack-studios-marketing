@@ -31,7 +31,6 @@
   }
 
   .contentGrid {
-    border: 1px solid red;
     display: grid;
     width: 100%;
     gap: 2rem;

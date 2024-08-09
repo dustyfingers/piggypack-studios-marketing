@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid green;
   padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
 }
 
