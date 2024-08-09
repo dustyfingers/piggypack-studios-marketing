@@ -87,15 +87,16 @@ interface IItem {
   color: THREE.Color;
   url: string;
 }
+
+type IItemRefType = ImageProps &
+  THREE.Mesh<
+    THREE.BufferGeometry<THREE.NormalBufferAttributes>,
+    THREE.Material | THREE.Material[],
+    THREE.Object3DEventMap
+  >;
+
 const Item = ({ index, position, scale, color, url }: IItem) => {
-  const ref = useRef<
-    ImageProps &
-      THREE.Mesh<
-        THREE.BufferGeometry<THREE.NormalBufferAttributes>,
-        THREE.Material | THREE.Material[],
-        THREE.Object3DEventMap
-      >
-  >(null);
+  const ref = useRef<IItemRefType>(null);
   const scroll = useScroll();
   const { clicked, urls } = useSnapshot(state);
   const [hovered, setHovered] = useState(false);
@@ -114,8 +115,9 @@ const Item = ({ index, position, scale, color, url }: IItem) => {
         0.15,
         delta
       );
-      // ref.current.material.scale[0] = ref.current.scale.x;
-      // ref.current.material.scale[1] = ref.current.scale.y;
+      // these two lines still dont work as expected
+      // ref.current.scale.x = ref.current.scale.x;
+      // ref.current.scale.y = ref.current.scale.y;
       if (clicked !== null && index < clicked)
         easing.damp(ref.current.position, "x", position.x - 2, 0.15, delta);
       if (clicked !== null && index > clicked)
@@ -129,16 +131,22 @@ const Item = ({ index, position, scale, color, url }: IItem) => {
         0.15,
         delta
       );
-      // easing.dampC(
-      //   ref.current.material.color,
-      //   hovered || clicked === index ? "white" : "#aaa",
-      //   hovered ? 0.3 : 0.15,
-      //   delta
-      // );
+
+      // this doesnt work either
+      // if (ref.current.color) {
+      //   console.log("this is happening...");
+      //   easing.dampC(
+      //     ref.current.color as THREE.Color,
+      //     hovered || clicked === index ? "white" : "#aaa",
+      //     hovered ? 0.3 : 0.15,
+      //     delta
+      //   );
+      // }
     }
   });
   return (
     <Image
+      color={color}
       ref={ref}
       url={url}
       position={position}
@@ -159,7 +167,7 @@ const Items = ({ w, gap }: IItems) => {
   const { urls } = useSnapshot(state);
   const { width } = useThree((state) => state.viewport);
   const xW = w + gap;
-  const color = new THREE.Color();
+  const color = new THREE.Color("white");
   return (
     <ScrollControls
       horizontal
@@ -208,10 +216,10 @@ const WorkGallery = () => {
       <ContentContainer>
         <h3>Web Design and Development</h3>
         <WorkCarousel />
-        <h3>Branding and Print Design</h3>
+        {/* <h3>Branding and Print Design</h3>
         <WorkCarousel />
         <h3>Social Media Marketing and Management</h3>
-        <WorkCarousel />
+        <WorkCarousel /> */}
       </ContentContainer>
     </section>
   );
