@@ -9,13 +9,26 @@
   padding: 4rem 0;
   scroll-snap-align: start;
   padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
+  text-align: center;
+
+  .impactHeader {
+    margin-bottom: 2rem;
+  }
 
   .impactGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
     .impactGridItem {
-      border: 1px solid red;
+      display: grid;
+      gap: 1rem;
+      justify-items: center;
+
+      .impactIcon {
+        width: 100%;
+        min-height: 100px;
+      }
     }
   }
 }
@@ -23,5 +36,9 @@
 @media (min-width: 701px) {
   .impactSection {
     padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
+
+    .impactGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

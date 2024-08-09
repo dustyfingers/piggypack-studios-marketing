@@ -5,10 +5,75 @@
   align-items: center;
   justify-content: center;
   padding: var(--mobileBlockYPadding) 0 var(--mobileBlockYPadding) 0;
+  position: relative;
+
+  .aboutUsHeader {
+    color: var(--cream);
+    margin-bottom: 2rem;
+  }
+
+  .firstHalf {
+    position: absolute;
+    height: calc(50% + 2rem);
+    width: 100%;
+    top: 0;
+    background: var(--blue);
+    z-index: -99;
+  }
+
+  .secondHalf {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: calc(50% + 2rem);
+    background: var(--cream);
+    z-index: -99;
+  }
+
+  .contentGrid {
+    border: 1px solid red;
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+
+    .firstContent {
+    }
+
+    .secondContent {
+    }
+  }
 }
 
 @media (min-width: 701px) {
   .aboutUs {
     padding: var(--desktopBlockYPadding) 0 var(--desktopBlockYPadding) 0;
+
+    .firstHalf {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      left: 0;
+      background: var(--blue);
+    }
+
+    .secondHalf {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      left: 50%;
+      top: 0;
+      background: var(--cream);
+    }
+
+    .contentGrid {
+      grid-template-columns: repeat(2, 1fr);
+      .firstContent {
+        color: var(--cream);
+      }
+
+      .secondContent {
+        color: var(--blue);
+      }
+    }
   }
 }

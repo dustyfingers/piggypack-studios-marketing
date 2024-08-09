@@ -4,8 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cream);
+  color: var(--blue);
   padding: calc(var(--mobileNavHeight) + 1rem) 0 var(--mobileBlockYPadding) 0;
+  background: var(--cream);
 
   .pageHeadline {
     margin-bottom: 1rem;
