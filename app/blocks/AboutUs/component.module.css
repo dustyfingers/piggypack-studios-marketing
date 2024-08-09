@@ -36,9 +36,11 @@
     gap: 2rem;
 
     .firstContent {
+      color: var(--cream);
     }
 
     .secondContent {
+      color: var(--blue);
     }
   }
 }
@@ -66,13 +68,6 @@
 
     .contentGrid {
       grid-template-columns: repeat(2, 1fr);
-      .firstContent {
-        color: var(--cream);
-      }
-
-      .secondContent {
-        color: var(--blue);
-      }
     }
   }
 }
